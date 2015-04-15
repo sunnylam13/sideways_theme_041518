@@ -1,0 +1,140 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+$lightenIncrement: 10%;
+$darkenIncremement: 10%;
+
+// COLOURS
+$firenzeGreen: #248f67;
+$firenzePeachYellow: #fff4a1;
+$firenzeOrange: #ffad19;
+$firenzeRed: #c3360a;
+$firenzeDarkRed: #990700;
+// END COLOURS
+
+// BASE
+$basefontfamily:'Open Sans', sans-serif;
+$basefontsize:16px;
+$baselineheight:16px;
+$baseFontColor: black;
+$baseHoverColor: $firenzeRed;
+$basebackcolor: $firenzePeachYellow;
+// END BASE
+
+// NAV BAR
+$navbarcolour: $baseFontColor;
+$navbarcolourback: $firenzePeachYellow;
+// END NAV BAR
+
+// HERO BLOCK
+$heroblockcolour: white;
+$heroblockcolourback: $firenzeOrange;
+$heroblockcoloursubhead: $firenzeRed;
+// END HERO BLOCK
+
+// HIGHLIGHTS
+$highlightColour: lighten(black,50%);
+$highlightImage1:$firenzeGreen;
+$highlightImage2:$firenzeOrange;
+$highlightImage3:$firenzeRed;
+
+$highlightColourLink: white;
+
+$highlightColourBackLink1: $firenzeRed;
+$highlightColourBackLink1Hover: lighten($highlightColourBackLink1,$lightenIncrement);
+
+$highlightColourBackLink2: $firenzeGreen;
+// $highlightColourBackLink2: black;
+$highlightColourLink2Hover: lighten($highlightColourBackLink2,$lightenIncrement);
+// END HIGHLIGHTS
+
+// PORTFOLIO
+$portfolioColour: $baseFontColor;
+
+$portfolioColourLink: white;
+$portfolioColourBackLink: $firenzeOrange;
+$portfolioColourLinkHover: lighten($portfolioColourBackLink,$lightenIncrement);
+// END PORTFOLIO
+
+// BLOG
+$blogColour: black;
+
+$blogColourBackLink1: $firenzeRed;
+$blogColourBackHoverLink1: lighten($blogColourBackLink1,$lightenIncrement);
+
+$blogColourBackLink2: $firenzeGreen;
+$blogColourBackHoverLink2: lighten($blogColourBackLink2,$lightenIncrement);
+
+// END BLOG
+
+// FOOTER
+
+$footerColourText: lighten(grey,$lightenIncrement*2.5);
+$footerColourNonText: white;
+
+$recentPostColour: $footerColourNonText;
+$recentPostColourBack: $firenzeDarkRed;
+$recentPostDateBack: $firenzePeachYellow;
+$recentPostHeadlineColour: $recentPostColour;
+$recentPostSummaryText: $footerColourText;
+
+$aboutHeadlineColour: $footerColourNonText;
+$aboutColourLink: $recentPostDateBack;
+
+$moreLinkColor: $footerColourNonText;
+
+$socialFacebook: #3c549a;
+$socialTwitter: #00aae8;
+$socialDribble: #d40066;
+$socialLinkedIn: #00639b;
+$socialGooglePlus: #eb0000;
+
+// END FOOTER
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+// suggest you build some classes ahead of time which you can assign as required
+
+// I almost always get rid of text decoration so why no just get rid of it by default?
+a {
+	text-decoration: none;
+}
+
+.italicIt {
+	font-style: italic;
+}
+
+.boldIt {
+	font-weight: 900;
+}
+
+.yellowHighlight {
+	background: yellow;
+}
+
+.orangeHighlight {
+	background: #ffbe74;
+}
+
+.crimsonWords {
+	color: red;
+}
+

@@ -1,0 +1,44 @@
+////////////////////////////////////////////
+// 		HIGHLIGHTS
+/////////////////////////////////////////
+
+//- this section is used for the Rule of 3 for communication, advertising, special offers, the bullet points
+//- you'll want to replace the placeholder text later on
+
+//- ===================================
+//- 		MIXINS
+//- ===================================
+
+mixin highlightUnit041415a
+	if block
+		block
+	else
+		section.hl_block
+			span.fa.fa-gears
+			h2 Lorem ipsum
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
+
+//- END MIXINS
+
+section.highlights
+	.wrapper.clearfix
+		+highlightUnit041415a
+			section.hl_block.special1
+				span.fa.fa-gears
+				h2 Lorem ipsum
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
+		//- the left and right side borders are used for the central unit with box shadow as well for emphasis
+		+highlightUnit041415a
+			section.hl_block.special2
+				span.fa.fa-fire
+				h2 Lorem ipsum dolor
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
+		+highlightUnit041415a
+			section.hl_block.special3
+				span.fa.fa-adjust
+				h2 Lorem ipsum
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
+		+standardLinkButton041415a('Jump on It','#')
+		+standardLinkButton041415a('Learn More','#')
+
+////////////////////////////////////////////

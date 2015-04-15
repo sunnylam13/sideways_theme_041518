@@ -1,0 +1,33 @@
+html(lang="en")
+	head
+		block title
+		include ./includes/variables.global.041415.1.jade
+		include ./includes/mixins.universal.041415.1.jade
+		include ./includes/mixins.project.041415.1.jade
+		include ./includes/meta.jade
+		include ./includes/links.jade
+		include ./includes/scripts.jade 
+	body
+		include ./includes/googleCode.jade
+		
+		//- each of the individual sections will be wrapped as per the full bleed layout except the heroblock
+		//- in the original inspiration (http://html5up.net/uploads/demos/dopetrope/index.html) most of the main blocks were sections
+
+		block navbar
+			//- here's where the nav menu goes
+
+		block heroblock
+			//- typically where the hero image goes
+
+		block highlights
+			//- used for special offers, works with the rule of 3
+
+		block portfolio
+			//- here's where the numerous portfolio items would go... maybe add the option to select certain types... this time vary the placeholder image sources
+
+		block blog
+			//- here's where the latest/most recent blog posts would go
+
+		block footer
+			//- there will be multiple sections in here including the copyright section... remember to use the section element
+

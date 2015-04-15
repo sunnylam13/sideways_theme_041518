@@ -1,0 +1,141 @@
+////////////////////////////////////////////
+// 		FOOTER
+/////////////////////////////////////////
+
+//- ===================================
+//- 		MIXINS
+//- ===================================
+
+mixin recentPostEntry041415a(month,day,headline,text)
+	if block
+		block
+	else
+		//- you could probably set a flexbox on the li
+		li
+			.date
+				p.month=month
+				p.day=headline
+			.copy
+				h3=headline
+				p=text
+
+mixin recentPosts041415a
+	if block
+		block
+	else
+		section.recentPosts
+			h2 Lorem ipsum dolor.
+			ul
+				+recentPostEntry041415a('Mar','09','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
+				+recentPostEntry041415a('Mar','07','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
+				+recentPostEntry041415a('Mar','05','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
+				+recentPostEntry041415a('Mar','03','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
+				+recentPostEntry041415a('Mar','01','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
+
+mixin aboutThis041415a
+	if block
+		block
+	else
+		section.aboutThis
+			h2 What's This All About?
+			img(src="http://lorempixel.com/400/200", alt="Lorem Placeholder Image")
+			p This is 
+				span Sideways Street
+				| , a free, fully responsive HTML5 site template.  It is derived from a template by 
+				a(href='http://n33.co/') AJ 
+				| for 
+				a(href='http://html5up.net/') HTML5 UP
+				| .
+			p Unlike AJ's template this one was rebuilt using Jade, SCSS and Javascript without using Skel.
+			p It's released free under the Creative Commons Attribution license so you're free to use it for any personal or commercial project.  
+			p Don't forget to credit AJ.
+
+mixin moreLinksBlock041415a
+	if block
+		block
+	else
+		section.moreLinks
+			h2 Lorem ipsum
+			ul
+				+linkTemplate033115a('#','Lorem ipsum dolor sit amet, consectetur adipisicing.')
+				+linkTemplate033115a('#','Lorem ipsum dolor sit amet, consectetur adipisicing.')
+				+linkTemplate033115a('#','Lorem ipsum dolor sit amet, consectetur adipisicing.')
+				+linkTemplate033115a('#','Lorem ipsum dolor sit amet, consectetur adipisicing.')
+				+linkTemplate033115a('#','Lorem ipsum dolor sit amet, consectetur adipisicing.')
+				+linkTemplate033115a('#','Lorem ipsum dolor sit amet, consectetur adipisicing.')
+
+mixin contactInfo041415a
+	if block
+		block
+	else
+		section.contactInfo
+			h2 Contact Information
+			//- you can apply flexbox on this ul as well
+			.row
+				ul.socialIcons
+					li
+						a(href=facebookLink)
+							span.fa.fa-facebook
+					li
+						a(href=twitterLink)
+							span.fa.fa-twitter
+					//- li
+					//- 	a(href=dribbleLink)
+					//- 		span.fa.fa-dribbble
+					li
+						a(href=linkedInLink)
+							span.fa.fa-linkedin
+					li
+						a(href=googlePlusLink)
+							span.fa.fa-google-plus
+			.row
+				div
+					h3 Address
+				div
+					p The Incorporated
+					p 1234 This Where Road Suite
+					p Toronto, ON M8C 1D4
+			.row
+				div
+					h3 Mail
+				div
+					a(href="#") someone@untitled.com
+			.row
+				div
+					h3 Phone
+				div
+					p (800) 000-0000
+
+mixin copyrightInfo041415a
+	if block
+		block
+	else
+		section.copyright
+			//- can apply flexbox to this ul
+			//- you'll use :before on the 2nd li thereafter to create the divider
+			ul
+				li &copy; Untitled.  All Rights Reserved.
+				li Design:  
+					a(href=personalWebSite) Sunny Lam
+				li Demo Images: 
+					a(href=loremWebLink) Lorem Pixel
+
+	
+//- END MIXINS
+
+//- within each row are a set of elements which you can alter with flexbox to make responsive easier later on
+
+section.footer
+	.wrapper.clearfix
+		//- apply the flexbox to .row to affect the sections within
+		.row
+			+recentPosts041415a
+			+aboutThis041415a
+		.row
+			+moreLinksBlock041415a
+			+moreLinksBlock041415a
+			+contactInfo041415a
+		.row
+			+copyrightInfo041415a
+
+////////////////////////////////////////////
