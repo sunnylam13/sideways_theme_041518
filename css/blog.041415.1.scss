@@ -1,0 +1,95 @@
+////////////////////////////////////////////
+///// 		BLOG
+///////////////////////////////////////////////
+
+////////////////////////////////////////////
+///// 		MAIN CODE
+///////////////////////////////////////////////
+
+section.blog {
+	background: $blogColourBack;
+	@include sectionPadding041515(2%,5%);
+
+	////////////////////////////////////////////
+	///// 		HEADER MAJOR SECTION STYLING
+	///////////////////////////////////////////////
+	
+	// args: $borderStyle,$fontfamily,$fontsize,$backColor
+	@include headerMajor041615a($blogBorderHeaderM,$blogFontFamilyHeaderM,$blogFontSizeHeaderM,$blogColourBackHeaderM);
+	
+	///////////////////////////////////////////////
+	
+	////////////////////////////////////////////
+	///// 		BLOG UNIT
+	///////////////////////////////////////////////
+	
+	@include flexboxSettings041615a();
+
+	section.blog_entry {
+		@include column(6);
+		background: $blogUnitColourBack;
+		border-bottom: $blogBorder;
+		& img {
+			width: 100%;
+			height: 16em;
+		}
+		& .text {
+			padding: 8% 5% 8% 5%;
+			text-align: center;
+			& h3 {
+				font-family: $blogFontFamilyHeader;
+				font-size: $blogFontSizeHeader;
+				text-align: left;
+			}
+			& p {
+				font-family: $blogFontFamilyText;
+				font-size: $blogFontSizeText;
+				text-align: left;
+				margin-bottom: 8%;
+			}
+			& p.timePost {
+				font-style: italic;
+			}
+
+		}
+
+		& .text a {
+			display: inline-block;
+			font-family: $blogFontFamilyLink;
+			font-size: $blogFontSizeLink;
+			color: $blogFontColourLink;
+			padding: 2% 8% 2% 8%;
+			margin-right: 2%;
+			margin-left: 2%;
+			border-radius: 5px;
+
+			// since the a has a class of .readMore you can't use a .readMore which means seek a child div with class .readMore in an a... you must use a.readMore which is &.readMore not & .readMore
+			&.readMore {
+				background: $blogColourBackLink1;
+				&:hover {
+					background: $blogColourBackHoverLink1;
+				}
+				&:before {
+					@include beforeIconPlace041615a('\f05a');
+				}
+			}
+			&.readComments {
+				background: $blogColourBackLink2;
+				&:hover {
+					background: $blogColourBackHoverLink2;
+				}
+				&:before {
+					@include beforeIconPlace041615a('\f0e6');
+				}
+			}
+			
+		}
+
+	}
+	
+	///////////////////////////////////////////////
+
+}
+
+////////////////////////////////////////////
+///////////////////////////////////////////////

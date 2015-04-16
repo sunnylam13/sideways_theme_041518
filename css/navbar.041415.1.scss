@@ -1,0 +1,68 @@
+////////////////////////////////////////////
+///// 		NAV BAR
+///////////////////////////////////////////////
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////
+
+////////////////////////////////////////////
+///// 		MAIN CODE
+///////////////////////////////////////////////
+
+section.navbar {
+	margin-top: 0;
+	// background: $navbarcolourback;
+	@include sectionPadding041515(2.5%,2.5%);
+	& h2 {
+		text-align: center;
+		font-size: $navbarheadersize;
+		margin-bottom: 1.5%;
+		font-family: $navbarheaderfontfamily;
+	}
+	& ul {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		
+		& a {
+			text-align: center;
+			display: inline-block;
+			padding: 1em 2em 1em 2em;
+			// background: blue;
+			margin-left: 0.5em;
+			margin-right: 0.5em;
+			font-style: italic;
+			font-size: $navbarfontsize;
+			color: $navbarcolourmenu;
+			border-radius: 5px;
+			@include transitionEffectAll(0.5s);
+			&:link {
+				color: $navbarcolourmenu;
+			}
+			&:visited {
+				color: $navbarcolourmenu;
+			}
+			&:hover {
+				color: $navbarcolourmenu;
+				background: $navbarcolourmenubackhover2;
+			}
+		}
+
+		// nth-child only works on a child element... a is not the child element of ul... it's the child element of the li... so you must select the li with nth-child instead and then target the a
+		& li:nth-child(1) a {
+			color: $navbarcolourmenuhover;
+			background: $navbarcolourmenubackhover;
+			&:hover {
+				background: $navbarcolourmenubackhover;
+			}
+		}
+	}
+
+}
+
+///////////////////////////////////////////////

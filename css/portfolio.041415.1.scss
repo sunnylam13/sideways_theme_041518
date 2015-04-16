@@ -1,0 +1,90 @@
+////////////////////////////////////////////
+///// 		PORTFOLIO
+///////////////////////////////////////////////
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////
+
+////////////////////////////////////////////
+///// 		MAIN CODE
+///////////////////////////////////////////////
+
+section.portfolio {
+	background: $portfolioColourBack;
+	@include sectionPadding041515(5%,1%);
+
+	////////////////////////////////////////////
+	///// 		HEADER MAJOR SECTION STYLING
+	///////////////////////////////////////////////
+
+	// args: $borderStyle,$fontfamily,$fontsize,$backColor
+	@include headerMajor041615a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
+
+	////////////////////////////////////////////
+	
+	////////////////////////////////////////////
+	///// 		PORTFOLIO UNITS
+	////////////////////////////////////////////
+	
+	@include flexboxSettings041615a();
+
+	// & .flexbox {
+	// 	display: flex;
+	// 	flex-flow: row wrap;
+	// 	justify-content: space-around;
+	// 	align-content: center;
+	// 	align-items: center;
+	// }
+
+	& section.portfolio_unit {
+		@include column(4);
+		margin-bottom: 2%;
+		background: $portfolioUnitColourBack;
+
+		& img {
+			width: 100%;
+			height: 13em;
+		}
+
+		& .text {
+			padding: 10% 8% 10% 8%;
+			text-align: center;
+			& h3 {
+				font-size: $portfolioUnitFontSizeHeader;
+				margin-bottom: 10%;
+				margin-top: 3%;
+				font-family: $portfolioUnitFontFamilyHeader;
+			}
+			& p {
+				font-size: $portfolioUnitFontSizeText;
+				text-align: left;
+				font-family: $portfolioUnitFontFamilyText;
+			}
+			& a {
+				display: inline-block;
+				font-size: $portfolioUnitFontSizeLink;
+				background: $portfolioColourBackLink;
+				color: $portfolioColourLink;
+				padding: 4% 10% 4% 10%;
+				margin-top: 5%;
+				border-radius: 5px;
+				font-family: $portfolioUnitFontFamilyLink;
+				@include transitionEffectAllEaseIn(0.3s);
+				&:hover {
+					background: $portfolioColourLinkHover;
+				}
+			}
+		}
+	}
+
+	////////////////////////////////////////////
+}
+
+///////////////////////////////////////////////
+
+///////////////////////////////////////////////

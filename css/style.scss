@@ -46,7 +46,8 @@ body {
 
 .wrapper {
 	max-width: 1200px;
-	margin: 2% auto;
+	// using margin 2% auto puts space between the wrapper elements
+	margin: 0 auto;
 	position: relative;
 	z-index: 10;
 }

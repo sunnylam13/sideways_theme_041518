@@ -12,20 +12,24 @@ mixin portfolioBlock041415a(classLabels,imgURL,imgAltText)
 	else
 		section(class=classLabels).portfolio_unit
 			img(src="http://lorempixel.com/400/400", alt="Lorem Picture Placeholder")
-			h3 Lorem ipsum dolor sit
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iste debitis, voluptates sed repellendus nihil alias, enim, praesentium ex, cum aliquam quod temporibus libero. Placeat animi voluptatibus magni!
+			.text
+				h3 Lorem ipsum dolor sit
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iste debitis, voluptates sed repellendus nihil alias, enim, praesentium ex, cum aliquam quod temporibus libero. Placeat animi voluptatibus magni!
+				+linkTemplate033115a("#","Learn More")
 
 
 //- END MIXINS
 
 section.portfolio
 	.wrapper.clearfix
-		h2 My Portfolio
-		+portfolioBlock041415a('video')
-		+portfolioBlock041415a('graphic')
-		+portfolioBlock041415a('web')
-		+portfolioBlock041415a('video')
-		+portfolioBlock041415a('graphic')
-		+portfolioBlock041415a('graphic')
+		header.major
+			h2 My Portfolio
+		.flexbox
+			+portfolioBlock041415a('video')
+			+portfolioBlock041415a('graphic')
+			+portfolioBlock041415a('web')
+			+portfolioBlock041415a('video')
+			+portfolioBlock041415a('graphic')
+			+portfolioBlock041415a('graphic')
 
 ////////////////////////////////////////////

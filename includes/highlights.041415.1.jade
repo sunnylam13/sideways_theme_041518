@@ -22,23 +22,25 @@ mixin highlightUnit041415a
 
 section.highlights
 	.wrapper.clearfix
-		+highlightUnit041415a
-			section.hl_block.special1
-				span.fa.fa-gears
-				h2 Lorem ipsum
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
-		//- the left and right side borders are used for the central unit with box shadow as well for emphasis
-		+highlightUnit041415a
-			section.hl_block.special2
-				span.fa.fa-fire
-				h2 Lorem ipsum dolor
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
-		+highlightUnit041415a
-			section.hl_block.special3
-				span.fa.fa-adjust
-				h2 Lorem ipsum
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
-		+standardLinkButton041415a('Jump on It','#')
-		+standardLinkButton041415a('Learn More','#')
+		.hl_sections
+			+highlightUnit041415a
+				section.hl_block.special1
+					span.fa.fa-gears.fa-5x
+					h2 Lorem ipsum
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
+			//- the left and right side borders are used for the central unit with box shadow as well for emphasis
+			+highlightUnit041415a
+				section.hl_block.special2
+					span.fa.fa-fire.fa-5x
+					h2 Lorem ipsum dolor
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
+			+highlightUnit041415a
+				section.hl_block.special3
+					span.fa.fa-adjust.fa-5x
+					h2 Lorem ipsum
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
+		.row
+			+standardLinkButton041415a('Jump on It','#','jumpOnIt')
+			+standardLinkButton041415a('Learn More','#','learnMore')
 
 ////////////////////////////////////////////

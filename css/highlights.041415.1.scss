@@ -1,0 +1,121 @@
+////////////////////////////////////////////
+///// 		HIGHLIGHTS
+///////////////////////////////////////////////
+
+// this might be bullet benefits that need to be explained further, special offers, etc.
+// follows the Rule of Three
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////
+
+////////////////////////////////////////////
+///// 		MAIN CODE
+///////////////////////////////////////////////
+
+section.highlights {
+	@include sectionPadding041515(2.5%,5.5%);
+	border-bottom: 1px solid $highlightColourSectionBorder;
+	& .hl_sections {
+		display: flex;
+		justify-content: center;
+		flex-flow: row wrap;
+	}
+	& .hl_block {
+		@include column(4);
+		text-align: center;
+		margin-bottom: 4%;
+		// margin-top: 4%;
+		
+		// ICON  ------------------------------------------------
+		
+		& span.fa {
+			color: $highlightIconColour;
+			// padding: 3% 3% 3% 3%;
+			width: 2em;
+			height: 2em;
+			// match the line height to the height of the element and it should align everything vertically again
+			line-height: 2em;
+			border-radius: 5px;
+			// display: flex;
+			// justify-content: center;
+			// align-items: center;
+		}
+
+		// END ICON ------------------------------------------------
+		
+		
+		& h2 {
+			margin-top: 10%;
+			margin-bottom: 10%;
+			font-size: $highlightFontSizeHeader;
+			letter-spacing: 2px;
+			font-family: $highlightFontFamilyHeader;
+		}
+		& p {
+			font-family: $highlightFontFamilyText;
+			font-size: $highlightFontSizeText;
+			padding: 0 5% 0 5%;
+		}
+	}
+	& .special1 {
+		& span.fa {
+			background: $highlightImage1;
+		}
+		
+	}
+	& .special2 {
+		position: relative;
+		& span.fa {
+			background: $highlightImage2;
+		}
+		// border-left: 1px solid $highlightColourBlockBorder;
+		// border-right: 1px solid $highlightColourBlockBorder;
+		// @include highlightBoxShadow041515a($highlightColourBlockShadow);
+		@include highlightBoxShadow041515b($highlightColourBlockShadow,-19px,22px,-25px);
+		&:after {
+			top: 0;
+		}
+	}
+	& .special3 {
+		& span.fa {
+			background: $highlightImage3;
+		}
+	}
+	& .row {
+		display: flex;
+		justify-content: center;
+		flex-flow: row wrap;
+	}
+	& a {
+		display: inline-block;
+		background: lightgrey;
+		padding: 2% 8% 2% 8%;
+		margin-right: 1%;
+		margin-left: 1%;
+		border-radius: 5px;
+		color: $highlightColourLink;
+		font-size: $highlightFontSizeLink;
+		@include transitionEffectAll(0.5s);
+		font-family: $highlightFontFamilyLink;
+		letter-spacing: 2px;
+		&.jumpOnIt {
+			background: $highlightColourBackLink1;
+			&:hover {
+				background: $highlightColourBackLink1Hover;
+			}
+		}
+		&.learnMore {
+			background: $highlightColourBackLink2;
+			&:hover {
+				background: $highlightColourLink2Hover;
+			}
+		}
+	}
+}
+
+///////////////////////////////////////////////

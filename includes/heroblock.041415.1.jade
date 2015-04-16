@@ -2,13 +2,49 @@
 // 		HERO BLOCK
 /////////////////////////////////////////
 
-//- It will be easier to set the background of the section to the hero image... everything else can be wrapped
+//- ===================================
+//- 		MIXINS
+//- ===================================
+
+mixin flexImageTemplate041515a
+	//- for use with the Javascript slider... each time a li is used it is an image slide
+	li
+		a(href="javascript:void(0)")
+			//- img(src="http://lorempixel.com/1440/720", alt="Lorem")
+			img(src="http://lorempixel.com/1440/452", alt="Lorem")
+		.meta
+			h1 There's A 
+				span Sideways Street 
+				| On Every Path
+			p.subhead A Responsive Template by Sunny Lam
+
+mixin heroblock041415a
+	//- This version is if we don't use a slider
+	//- It will be easier to set the background of the section to the hero image... everything else can be wrapped
+	h1 There's A 
+		span Sideways Street 
+		| On Every Path
+	p.subhead A Responsive Template by Sunny Lam
+
+mixin heroblock041515a
+	//- This is for a Javascript slider
+	ul.flexslider#bxslider
+		+flexImageTemplate041515a
+		+flexImageTemplate041515a
+		+flexImageTemplate041515a
+
+//- END MIXINS
+
+//- ===================================
+//- 		MAIN CODE
+//- ===================================
 
 section.heroblock
-	.wrapper.clearfix
-		h1 There's A 
-			span Sideways Street 
-			| On Every Path
-		p.subhead A Responsive Template by Sunny Lam
+	//- we don't want to apply a wrapper here because we want the image to span the width of the screen
+	//- .wrapper.clearfix
+	//- +heroblock041415a
+	+heroblock041515a
+
+//- END MAIN CODE
 
 ////////////////////////////////////////////

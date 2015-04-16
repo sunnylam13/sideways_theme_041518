@@ -1,0 +1,152 @@
+////////////////////////////////////////////
+///// 		HERO BLOCK
+///////////////////////////////////////////////
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+@mixin imageSliderMainHead033015a {
+
+	// this is for the slider version of the html code
+
+	///////////////////////////////////////////	
+	///  REMOVE BORDER AND SHADOW AROUND SLIDER
+	/////////////////////////////////////////////
+
+	// had to adjust the links so that bxslider.css came before style.css that way this code can overwrite the default
+
+	.bx-wrapper .bx-viewport {
+		box-shadow: none;
+		border: 0;
+		// MAKE SLIDER WRAPPER STRETCH ACROSS THE PAGE
+		// before this there was a white gap on the right side no matter what resolution I used
+		// bx-slider uses left: -5px by default which screws things up
+		left: 0;
+	}
+
+	////////////////////////////////////////////
+
+	////////////////////////////////////////////
+	///// 		SHIFT SLIDER NAV UPWARD
+	///////////////////////////////////////////////
+
+	.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+		// position: absolute;
+		// width: 100%;
+		// bottom: 10%;
+		// bottom: 20%;
+		bottom: 5%;
+	}
+
+	////////////////////////////////////////////
+
+	////////////////////////////////////////////
+	///// 		MAKE SLIDER NEXT/PREV BUTTONS SHOW UP
+	///////////////////////////////////////////////
+	// the url(images/) by default won't work in my current setup
+	// I have to change the links... to url(../images/) in this folder setup
+	// don't forget to copy the images from the bx-slider folder
+
+	// use this one to control the positioning of the next/prev button a links
+	.bx-wrapper .bx-controls-direction a {
+		top: 50%;
+	}
+
+	.bx-wrapper .bx-controls-auto .bx-start {
+		background: url(../images/controls.png) -86px -11px no-repeat;
+	}
+
+	.bx-wrapper .bx-controls-auto .bx-stop {
+		background: url(../images/controls.png) -86px -44px no-repeat;
+	}
+
+	.bx-wrapper .bx-loading {
+		background: url(../images/bx_loader.gif) center center no-repeat #fff;
+	}
+
+	.bx-wrapper .bx-prev {
+		left: 10px;
+		background: url(../images/controls.png) no-repeat 0 -32px;
+	}
+
+	.bx-wrapper .bx-next {
+		right: 10px;
+		background: url(../images/controls.png) no-repeat -43px -32px;
+	}
+
+	////////////////////////////////////////////
+
+	////////////////////////////////////////////
+	///// 		CHANGE SLIDER'S PAGER LINK SO THAT YOU CAN ACTUALLY SEE WHICH ONE IS HIGHLIGHTED
+	///////////////////////////////////////////////
+	// original colour was #666 which only shows up on light or white backgrounds
+	// change the pager hover colour and active colour
+	// you could also separate them out
+
+	// .bx-wrapper .bx-pager.bx-default-pager a {
+	// 	// color: $sliderPagerColorLink;
+	// }
+
+	// you want to target the active mode
+	// .bx-wrapper .bx-pager.bx-default-pager a.active {
+	// 	color: $sliderPagerColorLink;
+	// }
+
+	// .bx-wrapper .active {
+	// 	background: $sliderPagerColorLink;
+	// }
+
+	.bx-wrapper .bx-pager.bx-default-pager a:hover,
+	.bx-wrapper .bx-pager.bx-default-pager a.active {
+		background: $sliderPagerColorBack;
+	}
+
+	/////////////////////////////////////////////////
+}
+
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+///// 		MAIN CODE
+///////////////////////////////////////////////
+
+// this is where the banner image would go
+// instead I may insert a 3 image slider instead
+
+section.heroblock {
+	position: relative;
+	& ul {
+		margin: 0;
+		padding: 0;
+	}
+	& ul li a img {
+		max-width: 100%;
+		// height: 60%;
+	}
+
+	& .meta {
+		position: absolute;
+		background: $heroblockcolourback;
+		top: 35%;
+		left: 21.5%;
+		padding: 2% 5% 1% 5%;
+		border-radius: 5px;
+		text-align: center;
+		& h1 {
+			font-size: $heroblockfontsizeheader;
+			font-family: $heroblockfontsizefontfamily;
+			color: $heroblockcolour;
+		}
+		& p.subhead {
+			font-size: $heroblockfontsize;
+			color: $heroblockcoloursubhead;
+		}
+	}
+
+	// NOTE:  This adjusted bxslider code must be put within the specific section otherwise you'll have to overwrite it later on when you use the same slider mechanism elsewhere...  Like the store page...
+
+	@include imageSliderMainHead033015a;
+}
+
+///////////////////////////////////////////////

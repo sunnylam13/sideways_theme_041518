@@ -2,15 +2,25 @@
 // 		NAVBAR
 /////////////////////////////////////////
 
+//- ===================================
+//- 		MIXINS
+//- ===================================
+
+mixin navbar041415a
+	ul.navbar
+		+linkTemplate033115a('#','Home')
+		+linkTemplate033115a('#','Dropdown')
+		+linkTemplate033115a('#','Left Sidebar')
+		+linkTemplate033115a('#','Right Sidebar')
+		+linkTemplate033115a('#','No Sidebar')
+
+
+//- END MIXINS
+
 section.navbar
 	.wrapper.clearfix
 		h2 Sideways Street
-		ul.navbar
-			+linkTemplate033115a('#','Home')
-			+linkTemplate033115a('#','Dropdown')
-			+linkTemplate033115a('#','Left Sidebar')
-			+linkTemplate033115a('#','Right Sidebar')
-			+linkTemplate033115a('#','No Sidebar')
+		+navbar041415a
 
 ////////////////////////////////////////////
 

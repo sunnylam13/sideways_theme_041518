@@ -15,60 +15,153 @@
 $lightenIncrement: 10%;
 $darkenIncremement: 10%;
 
-// COLOURS
+// COLOURS ----------------------------------
 $firenzeGreen: #248f67;
 $firenzePeachYellow: #fff4a1;
 $firenzeOrange: #ffad19;
 $firenzeRed: #c3360a;
 $firenzeDarkRed: #990700;
-// END COLOURS
+// END COLOURS ----------------------------------
 
-// BASE
-$basefontfamily:'Open Sans', sans-serif;
+// FONT FAMILIES ----------------------------------
+$opensans: 'Open Sans', sans-serif;
+$francoisone: 'Francois One', sans-serif;
+$josefinsans: 'Josefin Sans', sans-serif;
+$anton: 'Anton', sans-serif;
+// END FONT FAMILIES ----------------------------------
+
+// BASE ----------------------------------
+$basefontfamily:$opensans;
 $basefontsize:16px;
 $baselineheight:16px;
 $baseFontColor: black;
 $baseHoverColor: $firenzeRed;
-$basebackcolor: $firenzePeachYellow;
-// END BASE
+$basebackcolor: white;
+// END BASE ----------------------------------
 
-// NAV BAR
+// NAV BAR ----------------------------------
 $navbarcolour: $baseFontColor;
+// $navbarcolourback: white;
 $navbarcolourback: $firenzePeachYellow;
-// END NAV BAR
 
-// HERO BLOCK
+$navbarheaderfontfamily: $francoisone;
+$navbarheadersize: $basefontsize*2;
+
+$navbarfontsize: $basefontsize*0.8;
+
+$navbarcolourmenu: black;
+$navbarcolourmenuhover: white;
+$navbarcolourmenubackhover: $firenzeRed;
+$navbarcolourmenubackhover2: lighten(grey,40%);
+
+//navbar submenu
+
+// END NAV BAR ----------------------------------
+
+// HERO BLOCK ----------------------------------
 $heroblockcolour: white;
 $heroblockcolourback: $firenzeOrange;
 $heroblockcoloursubhead: $firenzeRed;
-// END HERO BLOCK
 
-// HIGHLIGHTS
+$heroblockfontsize: $basefontsize*1.5;
+$heroblockfontsizeheader: $basefontsize*2.5;
+$heroblockfontsizefontfamily: $francoisone;
+
+$sliderPagerColorBack: $firenzeOrange;
+
+// END HERO BLOCK ----------------------------------
+
+// HIGHLIGHTS ----------------------------------
 $highlightColour: lighten(black,50%);
 $highlightImage1:$firenzeGreen;
 $highlightImage2:$firenzeOrange;
 $highlightImage3:$firenzeRed;
 
-$highlightColourLink: white;
+// highlight icons
+$highlightIconColour: white;
 
+// highlight block
+
+$highlightColourLink: white;
+$highlightFontSizeLink: $basefontsize*1.3;
+$highlightColourSectionBorder: darken(#f9f9f9,15%);
+$highlightColourBlockBorder: #f9f9f9;
+// $highlightColourBlockShadow: #f0f0f0;
+$highlightColourBlockShadow: rgba(240, 240, 240,0.8);
+
+$highlightFontFamilyHeader: $anton;
+$highlightFontFamilyText: $josefinsans;
+$highlightFontFamilyLink: $anton;
+
+$highlightFontSizeHeader: $basefontsize*1.5;
+$highlightFontSizeText: $basefontsize;
+
+// highlight lowest links
 $highlightColourBackLink1: $firenzeRed;
 $highlightColourBackLink1Hover: lighten($highlightColourBackLink1,$lightenIncrement);
+// $highlightFontFamilyLink1: $francoisone;
 
 $highlightColourBackLink2: $firenzeGreen;
 // $highlightColourBackLink2: black;
 $highlightColourLink2Hover: lighten($highlightColourBackLink2,$lightenIncrement);
-// END HIGHLIGHTS
+// $highlightFontFamilyLink2: $francoisone;
 
-// PORTFOLIO
+// END HIGHLIGHTS ----------------------------------
+
+// PORTFOLIO ----------------------------------
 $portfolioColour: $baseFontColor;
+$portfolioColourBack: $firenzePeachYellow;
 
+// portfolio header
+// $portfolioBorderMajor: 1px solid #f9f9f9;
+$portfolioBorderMajor: 1px solid $firenzeDarkRed;
+$portfolioHeaderFontFamily: $anton;
+$portfolioHeaderFontSize: $basefontsize*1.5;
+$portfolioHeaderColourBack: $firenzePeachYellow;
+
+// portfolio units
+$portfolioUnitColourBack: white;
+$portfolioUnitFontSizeHeader: $basefontsize*1.3;
+$portfolioUnitFontSizeText: $basefontsize;
+$portfolioUnitFontSizeLink: $basefontsize;
+$portfolioUnitFontFamilyHeader: $francoisone;
+$portfolioUnitFontFamilyText: $josefinsans;
+$portfolioUnitFontFamilyLink: $francoisone;
+
+// portfolio units links
 $portfolioColourLink: white;
 $portfolioColourBackLink: $firenzeOrange;
-$portfolioColourLinkHover: lighten($portfolioColourBackLink,$lightenIncrement);
-// END PORTFOLIO
 
-// BLOG
+$portfolioColourLinkHover: lighten($portfolioColourBackLink,$lightenIncrement);
+
+// END PORTFOLIO ----------------------------------
+
+// BLOG ----------------------------------
 $blogColour: black;
+$blogColourBack: $firenzePeachYellow;
+
+// header major
+$blogColourBackHeaderM: $firenzePeachYellow;
+$blogBorderHeaderM: 1px solid $firenzeDarkRed;
+$blogFontFamilyHeaderM: $anton;
+$blogFontSizeHeaderM: $basefontsize*1.5;
+
+// blog unit
+$blogUnitColourBack: white;
+
+$blogFontFamilyHeader: $francoisone;
+$blogFontSizeHeader: $basefontsize*1.3;
+
+$blogFontFamilyText: $josefinsans;
+$blogFontSizeText: $basefontsize;
+
+$blogBorder: 1px solid $firenzeDarkRed;
+
+// links
+
+$blogFontFamilyLink: $francoisone;
+$blogFontSizeLink: $basefontsize;
+$blogFontColourLink: white;
 
 $blogColourBackLink1: $firenzeRed;
 $blogColourBackHoverLink1: lighten($blogColourBackLink1,$lightenIncrement);
@@ -76,13 +169,16 @@ $blogColourBackHoverLink1: lighten($blogColourBackLink1,$lightenIncrement);
 $blogColourBackLink2: $firenzeGreen;
 $blogColourBackHoverLink2: lighten($blogColourBackLink2,$lightenIncrement);
 
-// END BLOG
+// END BLOG ----------------------------------
 
-// FOOTER
+// FOOTER ----------------------------------
 
 $footerColourText: lighten(grey,$lightenIncrement*2.5);
 $footerColourNonText: white;
 
+$footerHeaderFontSize: $basefontsize;
+
+$recentPostHeaderFontSize: $basefontsize;
 $recentPostColour: $footerColourNonText;
 $recentPostColourBack: $firenzeDarkRed;
 $recentPostDateBack: $firenzePeachYellow;
@@ -100,12 +196,103 @@ $socialDribble: #d40066;
 $socialLinkedIn: #00639b;
 $socialGooglePlus: #eb0000;
 
-// END FOOTER
+// END FOOTER ----------------------------------
 
 ////////////////////////////////////////////
 ///// 		MIXINS
 ///////////////////////////////////////////////
 
+// don't forget to include the $ in front of the variables
+
+@mixin sectionMargins041515($marginTop, $marginBottom) {
+	// where arguments are a value in px, em or %
+	margin-top: $marginTop;
+	margin-bottom: $marginBottom;
+}
+
+@mixin sectionPadding041515($padTop, $padBottom) {
+	// where arguments are a value in px, em or %
+	padding-top: $padTop;
+	padding-bottom: $padBottom;
+}
+
+@mixin highlightBoxShadow041515a($colour) {
+	// to accomplish a kind of shadow on only the left and right side... with some top, bottom bleed
+	// box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+	box-shadow: 12px 0 15px -4px $colour, -12px 0 8px -4px $colour;
+}
+
+@mixin highlightBoxShadow041515b($colour,$hor,$blur,$spread) {
+	// to accomplish a kind of shadow on only the left and right side...
+	// in SCSS this must be within the target element as it uses & 
+	// NOTE:  you must remember to set the target element to be position relative or this won't work right
+	// box-shadow: Hpx Vpx Blurpx spreadR green;
+	
+	&:before {
+		box-shadow: $hor 0 $blur $spread inset;
+		    content: " ";
+	    height: 100%;
+	    left: -15px;
+	    position: absolute;
+	    top: 0;
+	    width: 15px;
+	}
+	// NOTE:  It appears that the :after may be pushed down for some reason from unknown top properties... you may have to add a top: 0 after you use this mixin in order to fix it...  if this is a common problem I may add it here instead.
+	&:after {
+		box-shadow: $hor 0 $blur $spread inset;
+		    content: " ";
+	    height: 100%;
+	    position: absolute;
+	    right: -15px;
+	    width: 15px;
+	}
+}
+
+@mixin flexboxSettings041615a {
+	// this must be used within a parent element
+	// the div.flexbox must be used or some sort of wrapping parent element
+	& .flexbox {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-content: center;
+		align-items: center;
+	}
+}
+
+@mixin headerMajor041615a($borderStyle,$fontfamily,$fontsize,$backColor) {
+	// HEADER MAJOR SECTION STYLING
+	// this code must be placed within the styling for a parent
+	& header.major {
+		border-top: $portfolioBorderMajor;
+		position: relative;
+		padding-bottom: 5%;
+		& h2 {
+			position: absolute;
+			font-family: $portfolioHeaderFontFamily;
+			font-size: $portfolioHeaderFontSize;
+			background: $portfolioHeaderColourBack;
+			// set the background colour of the h2 to match the background of the section.portfolio so it appears the line is chopped there... may require z-index
+			top: -57%;
+			left: 44%;
+			padding: 1% 2% 1% 2%;
+		}
+	}
+}
+
+@mixin beforeIconPlace041615a($content) {
+	// $content must be a string... in the form of '\f01d'
+	// what will change each time you use it is the Unicode for content: ''
+
+	// to make this work you have to use the FontAwesome font and the content must be the icon's Unicode (available at FA's website)
+	// http://stackoverflow.com/questions/18793428/put-an-icon-after-list-item-with-after-and-font-awesome
+	content: $content;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	margin:0px 20px 0px 0px;
+	text-decoration:none;
+}
 
 ////////////////////////////////////////////
 // 		MAIN CODE

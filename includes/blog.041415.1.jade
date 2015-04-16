@@ -9,22 +9,25 @@
 mixin blogEntry041415a
 	section.blog_entry
 		img(src="http://lorempixel.com/600/300", alt="Lorem Picture Placeholder")
-		h3 Lorem ipsum dolor sit
-		p.timePost Posted 39 minutes ago
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, vitae, distinctio. Repellendus, explicabo. Ex, sint, laborum? Ratione laborum nam impedit. Nihil quae tempore nesciunt delectus, eum, quod facere maxime placeat tenetur in, perferendis perspiciatis minima sed distinctio vel praesentium nisi obcaecati explicabo at unde?
-		+standardLinkButton041415a('Read More','#')
-			a(href=imgLink,class='readMore')=buttonText
-		+standardLinkButton041415a('29 Comments','#')
-			a(href=imgLink,class='readComments')=buttonText
+		.text
+			h3 Lorem ipsum dolor sit
+			p.timePost Posted 39 minutes ago
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, vitae, distinctio. Repellendus, explicabo. Ex, sint, laborum? Ratione laborum nam impedit. Nihil quae tempore nesciunt delectus, eum, quod facere maxime placeat tenetur in, perferendis perspiciatis minima sed distinctio vel praesentium nisi obcaecati explicabo at unde?
+			+standardLinkButton041415a('Read More','#')
+				a(href="#",class='readMore') Read More
+			+standardLinkButton041415a('29 Comments','#')
+				a(href="#",class='readComments') Read Comments
 
 
 //- END MIXINS
 
 section.blog
 	.wrapper.clearfix
-		h2 The Blog
-		+blogEntry041415a
-		+blogEntry041415a
+		header.major
+			h2 The Blog
+		.flexbox.clearfix
+			+blogEntry041415a
+			+blogEntry041415a
 
 
 ////////////////////////////////////////////
