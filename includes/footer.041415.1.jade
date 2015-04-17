@@ -6,6 +6,7 @@
 //- 		MIXINS
 //- ===================================
 
+
 mixin recentPostEntry041415a(month,day,headline,text)
 	if block
 		block
@@ -19,6 +20,28 @@ mixin recentPostEntry041415a(month,day,headline,text)
 				h3=headline
 				p=text
 
+mixin recentPostEntry041615a
+	li
+		.date
+			p.month Mar
+			p.day 09
+		.copy
+			a(href="#")
+				h3 Lorem ipsum dolor sit amet
+			p Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.
+
+mixin recentPostEntry041715a
+	//- this version is for CSS Hexagons or shapes to create a right pointing arrow for the date
+	li
+		.date
+			p.month Mar
+			p.day 09
+			.rightPointer
+		.copy
+			a(href="#")
+				h3 Lorem ipsum dolor sit amet
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.
+
 mixin recentPosts041415a
 	if block
 		block
@@ -31,6 +54,22 @@ mixin recentPosts041415a
 				+recentPostEntry041415a('Mar','05','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
 				+recentPostEntry041415a('Mar','03','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
 				+recentPostEntry041415a('Mar','01','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
+
+mixin recentPosts041615a
+	section.recentPosts
+		h2 Lorem ipsum dolor.
+		ul
+			//- +recentPostEntry041615a
+			//- +recentPostEntry041615a
+			//- +recentPostEntry041615a
+			//- +recentPostEntry041615a
+			//- +recentPostEntry041615a
+			+recentPostEntry041715a
+			+recentPostEntry041715a
+			+recentPostEntry041715a
+			+recentPostEntry041715a
+			+recentPostEntry041715a
+			
 
 mixin aboutThis041415a
 	if block
@@ -49,6 +88,7 @@ mixin aboutThis041415a
 			p Unlike AJ's template this one was rebuilt using Jade, SCSS and Javascript without using Skel.
 			p It's released free under the Creative Commons Attribution license so you're free to use it for any personal or commercial project.  
 			p Don't forget to credit AJ and myself.
+			+standardLinkButton041415a("Learn More","#","learnMore","learnMore")
 
 mixin moreLinksBlock041415a
 	if block
@@ -65,46 +105,44 @@ mixin moreLinksBlock041415a
 				+linkTemplate033115a('#','Lorem ipsum dolor sit amet, consectetur adipisicing.')
 
 mixin contactInfo041415a
-	if block
-		block
-	else
-		section.contactInfo
-			h2 Contact Information
-			//- you can apply flexbox on this ul as well
-			.row
-				ul.socialIcons
-					li
-						a(href=facebookLink)
-							span.fa.fa-facebook
-					li
-						a(href=twitterLink)
-							span.fa.fa-twitter
-					//- li
-					//- 	a(href=dribbleLink)
-					//- 		span.fa.fa-dribbble
-					li
-						a(href=linkedInLink)
-							span.fa.fa-linkedin
-					li
-						a(href=googlePlusLink)
-							span.fa.fa-google-plus
-			.row
-				div
-					h3 Address
-				div
-					p The Incorporated
-					p 1234 This Where Road Suite
-					p Toronto, ON M8C 1D4
-			.row
-				div
-					h3 Mail
-				div
-					a(href="#") someone@untitled.com
-			.row
-				div
-					h3 Phone
-				div
-					p (800) 000-0000
+	section.contactInfo
+		h2 Contact Information
+		//- you can apply flexbox on this ul as well
+		//- if you apply the higher level .row you'll screw things up unless you change the class to be something else
+		.social_icons
+			ul.socialIcons
+				li
+					a(href=facebookLink).facebook
+						span.fa.fa-facebook
+				li
+					a(href=twitterLink).twitter
+						span.fa.fa-twitter
+				//- li
+				//- 	a(href=dribbleLink).dribble
+				//- 		span.fa.fa-dribbble
+				li
+					a(href=linkedInLink).linkedin
+						span.fa.fa-linkedin
+				li
+					a(href=googlePlusLink).gplus
+						span.fa.fa-google-plus
+		.address
+			.col1
+				h3 Address
+			.col2
+				p The Incorporated
+				p 1234 This Where Road Suite
+				p Toronto, ON M8C 1D4
+		.mail
+			.col1
+				h3 Mail
+			.col2
+				a(href="#") someone@untitled.com
+		.phone
+			.col1
+				h3 Phone
+			.col2
+				p (800) 000-0000
 
 mixin copyrightInfo041415a
 	if block
@@ -129,7 +167,8 @@ section.footer
 	.wrapper.clearfix
 		//- apply the flexbox to .row to affect the sections within
 		.row
-			+recentPosts041415a
+			//- +recentPosts041415a
+			+recentPosts041615a
 			+aboutThis041415a
 		.row
 			+moreLinksBlock041415a

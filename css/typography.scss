@@ -174,21 +174,40 @@ $blogColourBackHoverLink2: lighten($blogColourBackLink2,$lightenIncrement);
 // FOOTER ----------------------------------
 
 $footerColourText: lighten(grey,$lightenIncrement*2.5);
-$footerColourNonText: white;
+$footerColourNonText: lighten(white,$darkenIncremement*3);
+$footerColourBack: $firenzeDarkRed;
 
-$footerHeaderFontSize: $basefontsize;
+$footerHeaderFontSize: $basefontsize*1.7;
+$footerFontFamilyHeader: $anton;
 
-$recentPostHeaderFontSize: $basefontsize;
+$recentPostHeaderFontSize: $basefontsize*1.2;
+$recentPostHeaderFontFamily: $francoisone;
 $recentPostColour: $footerColourNonText;
 $recentPostColourBack: $firenzeDarkRed;
+
+$recentPostDateColour: black;
 $recentPostDateBack: $firenzePeachYellow;
+$recentPostFontSizeMonth: $basefontsize;
+$recentPostFontSizeDay: $basefontsize*1.8;
 $recentPostHeadlineColour: $recentPostColour;
+$recentPostBorder: 1px solid lighten($firenzePeachYellow,5%);
+
 $recentPostSummaryText: $footerColourText;
+$recentPostFontFamilySummaryText: $josefinsans;
+$recentPostFontSizeText: $basefontsize*1.1;
+
 
 $aboutHeadlineColour: $footerColourNonText;
 $aboutColourLink: $recentPostDateBack;
+$aboutFontSizeButton: $basefontsize;
+$aboutFontFamilyButton: $francoisone;
+$aboutColourButton: white;
+$aboutColourButtonBack: $firenzeOrange;
+$aboutColourButtonHover: lighten($blogColourBackLink1,$lightenIncrement);
 
 $moreLinkColor: $footerColourNonText;
+
+$contactBorder: 1px solid lighten($firenzePeachYellow,5%);
 
 $socialFacebook: #3c549a;
 $socialTwitter: #00aae8;
@@ -260,6 +279,15 @@ $socialGooglePlus: #eb0000;
 	}
 }
 
+@mixin flexboxSettings041715a {
+	// this is used within a parent without the class .flexbox... the actual class name used will vary
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+
 @mixin headerMajor041615a($borderStyle,$fontfamily,$fontsize,$backColor) {
 	// HEADER MAJOR SECTION STYLING
 	// this code must be placed within the styling for a parent
@@ -292,6 +320,33 @@ $socialGooglePlus: #eb0000;
 	font-style: normal;
 	margin:0px 20px 0px 0px;
 	text-decoration:none;
+}
+
+@mixin csshexagon041715a($borderWidth,$top,$bottom,$left,$right) {
+	// you should insert this within a div of some sort to create this
+	// set no height
+	// if you want a triangle pointing in a specific direction set the colour of the border opposite to it
+	// set all other borders to transparent
+	width: 0;
+	border-top: 30px solid $top;
+	border-bottom: 30px solid $bottom;
+	border-left: 30px solid $left;
+	border-right: 30px solid $right;
+}
+
+@mixin standardLinkStyle041715a($fontsize,$fontfamily,$fontcolour,$backColour,$backColourHover) {
+	display: inline-block;
+	font-size: $fontsize;
+	font-family: $fontfamily;
+	color: $fontcolour;
+	padding: 2% 8% 2% 8%;
+	margin-right: 2%;
+	margin-left: 2%;
+	border-radius: 5px;
+	background: $backColour;
+	&:hover {
+		background: $backColourHover;
+	}
 }
 
 ////////////////////////////////////////////
