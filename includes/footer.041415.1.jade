@@ -144,6 +144,46 @@ mixin contactInfo041415a
 			.col2
 				p (800) 000-0000
 
+mixin contactInfo041715a
+	section.contactInfo
+		h2 Contact Information
+		//- you can apply flexbox on this ul as well
+		//- if you apply the higher level .row you'll screw things up unless you change the class to be something else
+		.social_icons
+			ul.socialIcons
+				li
+					a(href=facebookLink).facebook
+						span.fa.fa-facebook
+				li
+					a(href=twitterLink).twitter
+						span.fa.fa-twitter
+				//- li
+				//- 	a(href=dribbleLink).dribble
+				//- 		span.fa.fa-dribbble
+				li
+					a(href=linkedInLink).linkedin
+						span.fa.fa-linkedin
+				li
+					a(href=googlePlusLink).gplus
+						span.fa.fa-google-plus
+		.address
+			//- .col1
+			h3 Address
+			.col2
+				p The Incorporated
+				p 1234 This Where Road Suite
+				p Toronto, ON M8C 1D4
+		.mail
+			//- .col1
+			h3 Mail
+			.col2
+				a(href="#") someone@untitled.com
+		.phone
+			//- .col1
+			h3 Phone
+			.col2
+				p (800) 000-0000
+
 mixin copyrightInfo041415a
 	if block
 		block
@@ -174,6 +214,7 @@ section.footer
 			+moreLinksBlock041415a
 			+moreLinksBlock041415a
 			+contactInfo041415a
+			//- +contactInfo041715a
 		.row
 			+copyrightInfo041415a
 

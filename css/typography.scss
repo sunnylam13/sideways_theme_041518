@@ -180,6 +180,7 @@ $footerColourBack: $firenzeDarkRed;
 $footerHeaderFontSize: $basefontsize*1.7;
 $footerFontFamilyHeader: $anton;
 
+// recent posts
 $recentPostHeaderFontSize: $basefontsize*1.2;
 $recentPostHeaderFontFamily: $francoisone;
 $recentPostColour: $footerColourNonText;
@@ -196,7 +197,7 @@ $recentPostSummaryText: $footerColourText;
 $recentPostFontFamilySummaryText: $josefinsans;
 $recentPostFontSizeText: $basefontsize*1.1;
 
-
+// about
 $aboutHeadlineColour: $footerColourNonText;
 $aboutColourLink: $recentPostDateBack;
 $aboutFontSizeButton: $basefontsize;
@@ -205,15 +206,24 @@ $aboutColourButton: white;
 $aboutColourButtonBack: $firenzeOrange;
 $aboutColourButtonHover: lighten($blogColourBackLink1,$lightenIncrement);
 
+// more links
+$moreLinkFontSize: $basefontsize*0.9;
 $moreLinkColor: $footerColourNonText;
 
-$contactBorder: 1px solid lighten($firenzePeachYellow,5%);
-
+// contact info
+$contactFontSize: $basefontsize*0.9;
 $socialFacebook: #3c549a;
 $socialTwitter: #00aae8;
 $socialDribble: #d40066;
 $socialLinkedIn: #00639b;
 $socialGooglePlus: #eb0000;
+
+$contactBorder: 1px solid lighten($firenzePeachYellow,5%);
+
+// copyright
+$copyrightFontSize: $basefontsize*0.7;
+$copyrightColour: white;
+$copyrightColourBack: lighten($firenzeDarkRed,$lightenIncrement*3);
 
 // END FOOTER ----------------------------------
 

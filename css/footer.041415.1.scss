@@ -14,6 +14,7 @@ section.footer {
 	background: $footerColourBack;
 	@include sectionPadding041515(5%,5%);
 	color: $footerColourText;
+	// color: white;
 
 	& .row {
 		@include flexboxSettings041715a;
@@ -28,11 +29,14 @@ section.footer {
 		font-family: $footerFontFamilyHeader;
 		color: $footerColourNonText;
 		margin-bottom: 15%;
+		letter-spacing: 2px;
 	}
 
 	& h3 {
 		font-size: $footerHeaderFontSize*0.6;
 		font-family: $footerFontFamilyHeader;
+		color: $footerColourNonText;
+		letter-spacing: 2px;
 	}
 
 	& a {
@@ -151,12 +155,13 @@ section.footer {
 		& a {
 			text-decoration: underline;
 			color: $moreLinkColor;
+			font-size: $moreLinkFontSize;
 			&:hover {
 				text-decoration: none;
 			}
 		}
 	}
-	// // MORE LINKS ------------------------------------------------
+	// // END MORE LINKS ------------------------------------------------
 
 	// CONTACT INFO  ------------------------------------------------
 	section.contactInfo {
@@ -166,12 +171,35 @@ section.footer {
 			padding: 0;
 			// border-bottom: $contactBorder;
 			margin-top: 5%;
+			
+			// & h3 {
+			// 	display: block;
+			// 	@include column(4);
+			// }
+			// & .col2 {
+			// 	@include column(8);
+			// }
 		}
 		& .col1 {
+			margin: 0;
+			padding: 0;
+			// this must be applied after the reset of margin 0, padding 0
 			@include column(4);
+			
 		}
 		& .col2 {
+			margin: 0;
+			padding: 0;
+			// this must be applied after the reset of margin 0, padding 0
 			@include column(8);
+			
+		}
+		& h3 {
+			margin: 0;
+			padding: 0;
+		}
+		& p {
+			font-size: $contactFontSize;
 		}
 		& a {
 			text-decoration: underline;
@@ -179,11 +207,17 @@ section.footer {
 				text-decoration: none;
 			}
 		}
+		& .address {
+			
+		}
 		& .mail {
 			padding-bottom: 5%;
+			
 		}
 		& .phone {
+			height: 5em;
 			border-bottom: none;
+			
 		}
 
 	}
@@ -195,25 +229,9 @@ section.footer {
 		margin-bottom: 10%;
 
 		& a {
+			// to centre the icons
 			text-align: center;
 			display: inline-block;
-			// width: 3.4375em;
-			// height: 3.4375em;
-			// border-radius: 5px;
-			
-			// &.facebook {
-			// 	background: $socialFacebook;
-			// }
-			// &.dribble {}
-			// &.twitter {
-			// 	background: $socialDribble;
-			// }
-			// &.linkedin {
-			// 	background: $socialLinkedIn;
-			// }
-			// &.gplus {
-			// 	background: $socialGooglePlus;
-			// }
 		}
 		& span.fa {
 			$iconsize: 1.4375em;
@@ -244,6 +262,40 @@ section.footer {
 
 	// // END CONTACT INFO ------------------------------------------------
 }
+
+	// COPYRIGHT  ------------------------------------------------
+	section.copyright {
+		font-size: $copyrightFontSize;
+		// color: $copyrightColour;
+		& ul {
+			@include flexboxSettings041715a;
+			justify-content: none;
+			// background: $copyrightColourBack;
+			padding: 3% 5% 3% 5%;
+		}
+		& li {
+			// $marginSpacing: 2%;
+			// margin-left: $marginSpacing;
+			// margin-right: $marginSpacing;
+			&:nth-child(1), &:nth-child(2) {
+				&::after {
+					content: '|';
+					margin-right: 5%;
+					margin-left: 5%;
+					color: darken($footerColourText,25%);
+				}
+			}
+		}
+		& a {
+			text-decoration: underline;
+			color: $moreLinkColor;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	// // END COPYRIGHT ------------------------------------------------
 
 
 // // END MAIN CODE ------------------------------------------------
