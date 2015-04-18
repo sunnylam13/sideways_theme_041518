@@ -47,6 +47,16 @@
 		@include phabletR {
 			bottom: -8%;
 		}
+
+		// 414
+		@include iphone6Plus414R {
+			bottom: -15%;
+		}
+
+		// 272
+		@include applewatch42mm272R {
+			bottom: -31%;
+		}
 	}
 
 	////////////////////////////////////////////
@@ -217,6 +227,21 @@
 				padding: 2% 3% 0.5% 3%;
 			}
 
+			// 390
+			@include applewatch42mmR {
+				max-width: 75%;
+			}
+
+			// 320
+			@include iphone6Minus320R {
+				max-width: 72%;
+			}
+
+			// 272
+			@include applewatch42mm272R {
+				max-width: 68%;
+			}
+
 			& h1 {
 				font-size: $heroblockfontsizeheader;
 				font-family: $heroblockfontsizefontfamily;
@@ -239,6 +264,21 @@
 				@include phoneR {
 					font-size: $heroblockfontsizeheader*0.5;
 				}
+
+				// 390
+				@include applewatch42mmR {
+					font-size: $heroblockfontsizeheader*0.5;
+				}
+
+				// 375
+				@include iphone6Plus375R {
+					font-size: $heroblockfontsizeheader*0.4;
+				}
+
+				// 272
+				@include applewatch42mm272R {
+					font-size: $heroblockfontsizeheader*0.3;
+				}
 			}
 			& p.subhead {
 				font-size: $heroblockfontsize;
@@ -253,6 +293,21 @@
 				@include phoneR {
 					font-size: $heroblockfontsizeheader*0.4;
 					padding: 0;
+				}
+
+				// 414
+				@include iphone6Plus414R {
+					font-size: $heroblockfontsizeheader*0.3;
+				}
+
+				// 375
+				@include iphone6Plus375R {
+					font-size: $heroblockfontsizeheader*0.25;
+				}
+
+				// 272
+				@include applewatch42mm272R {
+					font-size: $heroblockfontsizeheader*0.2;
 				}
 
 			}

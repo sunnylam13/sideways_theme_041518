@@ -93,6 +93,11 @@ section.highlights {
 			@include phoneR {
 				margin-top: 15%;
 			}
+
+			// 272
+			@include applewatch42mm272R {
+				margin-top: 25%;
+			}
 		}
 		& p {
 			font-family: $highlightFontFamilyText;
@@ -179,6 +184,12 @@ section.highlights {
 		@include transitionEffectAll(0.5s);
 		font-family: $highlightFontFamilyLink;
 		letter-spacing: 2px;
+
+		// 375
+		@include iphone6Plus375R {
+			margin-bottom: 3%;
+		}
+
 		&.jumpOnIt {
 			background: $highlightColourBackLink1;
 			&:hover {

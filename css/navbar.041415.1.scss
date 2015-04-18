@@ -33,6 +33,11 @@
 		left: -38%;
 		top: 182%;
 
+		// 272
+		@include applewatch42mm272R {
+			left: -78%;
+		}
+
 		// bx slider's z-index is set to 2000; you have to exceed that value
 		z-index: 2000;
 
@@ -69,12 +74,18 @@
 			}
 		}
 
+		// sub menu "up" pointer
 		&::before {
 			content: " ";
 			position: absolute;
 			@include csshexagon041715a(1.875em,transparent,$subnavcolourback,transparent,transparent);
 			top: -60px;
 			right: 36%;
+
+			// 272
+			@include applewatch42mm272R {
+				right: 14%;
+			}
 		}
 
 		//-------------------------------------

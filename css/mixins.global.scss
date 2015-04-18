@@ -104,6 +104,18 @@
 			margin-bottom: 5%;
 		}
 
+		// 414
+		@include iphone6Plus414R {
+			margin-top: 5%;
+			margin-bottom: 6%;
+		}
+
+		// 272
+		@include applewatch42mm272R {
+			margin-top: 10%;
+			margin-bottom: 10%;
+		}
+
 		& div {
 			position: absolute;
 			top: -54%;
@@ -115,6 +127,11 @@
 			// 480
 			@include phoneR {
 				top: -89%;
+			}
+
+			// 272
+			@include applewatch42mm272R {
+				top: -152%;
 			}
 		}
 		& h2 {
@@ -243,7 +260,7 @@
 			top: 16%;
 		}
 		
-		
+
 		
 	}
 }

@@ -30,6 +30,11 @@ section.footer {
 		color: $footerColourNonText;
 		margin-bottom: 15%;
 		letter-spacing: 2px;
+
+		// 414
+		@include iphone6Plus414R {
+			text-align: center;
+		}
 	}
 
 	& h3 {
@@ -37,6 +42,11 @@ section.footer {
 		font-family: $footerFontFamilyHeader;
 		color: $footerColourNonText;
 		letter-spacing: 2px;
+
+		// 414
+		@include iphone6Plus414R {
+			text-align: center;
+		}
 	}
 
 	& a {
@@ -90,6 +100,41 @@ section.footer {
 				// 480
 				@include phoneR {
 					height: 18%;
+				}
+
+				// 414
+				@include iphone6Plus414R {
+					height: 8%;
+				}
+
+				// 390
+				@include applewatch42mmR {
+					height: 18%;
+				}
+
+				// 375
+				@include iphone6Plus375R {
+					height: 9%;
+				}
+
+				// 340
+				@include applewatch38mmR {
+					height: 21%;
+				}
+
+				// 320
+				@include iphone6Minus320R {
+					height: 10%;
+				}
+
+				// 312
+				@include applewatch42mm312R {
+					height: 15%;
+				}
+
+				// 272
+				@include applewatch42mm272R {
+					height: 17%;
 				}
 
 				& p.month {
@@ -170,6 +215,11 @@ section.footer {
 			margin-bottom: 5%;
 		}
 
+		// 272
+		@include applewatch42mm272R {
+			text-align: center;
+		}
+
 		& h2 {
 			color: $aboutHeadlineColour;
 			letter-spacing: 2px;
@@ -179,6 +229,11 @@ section.footer {
 			// 667
 			@include iphone6Plus667R {
 				margin-bottom: 5%;
+			}
+
+			// 414
+			@include iphone6Plus414R {
+				text-align: center;
 			}
 		}
 		& img {
@@ -216,6 +271,24 @@ section.footer {
 			@include column(6);
 		}
 
+		// 414
+		@include iphone6Plus414R {
+			@include column(12);
+		}
+
+		// 375
+		@include iphone6Plus375R {
+			text-align: center;
+		}
+
+		& h2 {
+			// 414
+			@include iphone6Plus414R {
+				margin-bottom: 3%;
+				margin-top: 5%;
+			}
+		}
+
 		& li {
 			// border-bottom: $recentPostBorder;
 			margin-top: 3%;
@@ -225,6 +298,12 @@ section.footer {
 			text-decoration: underline;
 			color: $moreLinkColor;
 			font-size: $moreLinkFontSize;
+
+			// 272
+			@include applewatch42mm272R {
+				font-size: $moreLinkFontSize*0.8;
+			}
+			
 			&:hover {
 				text-decoration: none;
 			}
@@ -314,10 +393,30 @@ section.footer {
 		justify-content: flex-start;
 		align-content: flex-start;
 		margin-bottom: 10%;
+		// text-align: center;
 
 		// 667
 		@include iphone6Plus667R {
+			justify-content: center;
+			align-content: center;
 			margin-bottom: 5%;
+		}
+
+		// 375
+		@include iphone6Plus375R {
+			text-align: center;
+		}
+
+		// 320
+		@include iphone6Minus320R {
+			justify-content: flex-end;
+			align-content: flex-end;
+		}
+
+		// 272
+		@include applewatch42mm272R {
+			justify-content: center;
+			align-content: center;
 		}
 
 		& a {
