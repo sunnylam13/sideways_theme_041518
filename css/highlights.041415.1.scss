@@ -24,13 +24,37 @@ section.highlights {
 		display: flex;
 		justify-content: center;
 		flex-flow: row wrap;
+
+		// 720
+		@include phabletR {
+			// flex-direction: column;
+		}
+
+		// 480
+		@include phoneR {
+			// we needed to set this on the parent of the hl_block in order to get them to line up in one column
+			flex-direction: column;
+		}
 	}
 	& .hl_block {
-		@include column(4);
+		// @include column(4);
+		// if you use flex: 1 when using flexbox you can skip using Semantic GS... Semantic GS locks up the sizing an is less flexible
+		flex: 1;
+		flex-direction: column;
 		text-align: center;
 		margin-bottom: 4%;
 		// margin-top: 4%;
 		
+		// 720
+		@include phabletR {
+			// @include column(12);
+		}
+
+		// 480
+		@include phoneR {
+			flex-direction: column;
+		}
+
 		// ICON  ------------------------------------------------
 		
 		& span.fa {
@@ -59,6 +83,16 @@ section.highlights {
 			font-size: $highlightFontSizeHeader;
 			letter-spacing: 2px;
 			font-family: $highlightFontFamilyHeader;
+			
+			// 768
+			@include tabletR {
+				margin-top: 30%;
+			}
+
+			// 480
+			@include phoneR {
+				margin-top: 15%;
+			}
 		}
 		& p {
 			font-family: $highlightFontFamilyText;
@@ -68,6 +102,8 @@ section.highlights {
 	}
 	// ICON BLOCK LEFT  ------------------------------------------------
 	& .special1 {
+		
+
 		// ICON
 		& span.fa {
 			background: $highlightImage1;
@@ -84,6 +120,19 @@ section.highlights {
 	& .special2 {
 		position: relative;
 		@include highlightBoxShadow041515b($highlightColourBlockShadow,-19px,22px,-25px);
+
+		// 768
+		@include tabletR {
+			&::before {display: none;}
+			&::after {display: none;}
+		}
+
+		// 720
+		@include phabletR {
+			&::before {display: none;}
+			&::after {display: none;}
+		}
+
 		// ICON
 		& span.fa {
 			background: $highlightImage2;
@@ -97,6 +146,8 @@ section.highlights {
 	
 	// ICON BLOCK RIGHT  ------------------------------------------------
 	& .special3 {
+		
+
 		// ICON
 		& span.fa {
 			background: $highlightImage3;

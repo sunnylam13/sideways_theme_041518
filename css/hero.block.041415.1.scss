@@ -37,6 +37,16 @@
 		// bottom: 10%;
 		// bottom: 20%;
 		bottom: 5%;
+
+		// 736
+		@include iphone6Plus736R {
+			bottom: -8%;
+		}
+
+		// 720
+		@include phabletR {
+			bottom: -8%;
+		}
 	}
 
 	////////////////////////////////////////////
@@ -192,18 +202,59 @@
 			// using max-width prevents the div from staying the same size as the screen size shrinks
 			max-width: 80%;
 
+			// 940
 			@include desktopR {
 				max-width: 80%;
+			}
+
+			// 720
+			@include phabletR {
+				max-width: 60%;
+			}
+
+			// 480
+			@include phoneR {
+				padding: 2% 3% 0.5% 3%;
 			}
 
 			& h1 {
 				font-size: $heroblockfontsizeheader;
 				font-family: $heroblockfontsizefontfamily;
 				color: $heroblockcolour;
+
+				// 736
+				// @include iphone6Plus736R {
+				// 	font-size: $heroblockfontsizeheader/2;
+				// }
+
+				// 667
+				@include iphone6Plus667R {
+					font-size: $heroblockfontsizeheader*0.7;
+				}
+				// @include iphone6Plus667LandR {
+				// 	font-size: $heroblockfontsizeheader*0.9;
+				// }
+				
+				// 480
+				@include phoneR {
+					font-size: $heroblockfontsizeheader*0.5;
+				}
 			}
 			& p.subhead {
 				font-size: $heroblockfontsize;
 				color: $heroblockcoloursubhead;
+
+				// 667
+				@include iphone6Plus667R {
+					font-size: $heroblockfontsize*0.7;
+				}
+
+				// 480
+				@include phoneR {
+					font-size: $heroblockfontsizeheader*0.4;
+					padding: 0;
+				}
+
 			}
 		}
 

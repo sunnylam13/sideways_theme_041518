@@ -46,11 +46,22 @@ body {
 }
 
 .wrapper {
-	max-width: 1200px;
+	// max-width: 1200px;
+	max-width: 95%;
 	// using margin 2% auto puts space between the wrapper elements
 	margin: 0 auto;
 	position: relative;
 	z-index: 10;
+
+	// 768
+	@include tabletR {
+		max-width: 93%;
+	}
+
+	// 667
+	@include iphone6Plus667R {
+		// max-width: 90%;
+	}
 }
 
 .main {

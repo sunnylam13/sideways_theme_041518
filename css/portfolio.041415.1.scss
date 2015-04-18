@@ -17,13 +17,15 @@
 section.portfolio {
 	background: $portfolioColourBack;
 	@include sectionPadding041515(5%,1%);
-
+	@include flexboxSettings041615a;
+		
 	////////////////////////////////////////////
 	///// 		HEADER MAJOR SECTION STYLING
 	///////////////////////////////////////////////
 
 	// args: $borderStyle,$fontfamily,$fontsize,$backColor
-	@include headerMajor041615a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
+	// @include headerMajor041615a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
+	@include headerMajor041815a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
 
 	////////////////////////////////////////////
 	
@@ -31,20 +33,30 @@ section.portfolio {
 	///// 		PORTFOLIO UNITS
 	////////////////////////////////////////////
 	
-	@include flexboxSettings041615a();
-
-	// & .flexbox {
-	// 	display: flex;
-	// 	flex-flow: row wrap;
-	// 	justify-content: space-around;
-	// 	align-content: center;
-	// 	align-items: center;
-	// }
-
 	& section.portfolio_unit {
 		@include column(4);
+		// if you use only flex: 1 then all 6 divs 
+		// flex: 1;
 		margin-bottom: 2%;
 		background: $portfolioUnitColourBack;
+
+		// 736
+		@include iphone6Plus736R {
+			flex-flow: column;
+			@include column(6);
+			margin-bottom: 5%;
+		}
+
+		// 720
+		@include phabletR {
+			flex-flow: column;
+		}
+
+		// 480
+		@include phoneR {
+			@include column(12);
+			margin-bottom: 5%;
+		}
 
 		& img {
 			width: 100%;

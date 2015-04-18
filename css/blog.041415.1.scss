@@ -15,7 +15,7 @@ section.blog {
 	///////////////////////////////////////////////
 	
 	// args: $borderStyle,$fontfamily,$fontsize,$backColor
-	@include headerMajor041615a($blogBorderHeaderM,$blogFontFamilyHeaderM,$blogFontSizeHeaderM,$blogColourBackHeaderM);
+	@include headerMajor041815a($blogBorderHeaderM,$blogFontFamilyHeaderM,$blogFontSizeHeaderM,$blogColourBackHeaderM);
 	
 	///////////////////////////////////////////////
 	
@@ -29,6 +29,13 @@ section.blog {
 		@include column(6);
 		background: $blogUnitColourBack;
 		border-bottom: $blogBorder;
+
+		// 480
+		@include phoneR {
+			@include column(12);
+			margin-bottom: 5%;
+		}
+
 		& img {
 			width: 100%;
 			height: 16em;

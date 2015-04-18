@@ -91,6 +91,47 @@
 	}
 }
 
+@mixin headerMajor041815a($borderStyle,$fontfamily,$fontsize,$backColor) {
+	// HEADER MAJOR SECTION STYLING
+	// this code must be placed within the styling for a parent
+	& header.major {
+		border-top: $portfolioBorderMajor;
+		position: relative;
+		padding-bottom: 5%;
+
+		// 480
+		@include phoneR {
+			margin-bottom: 5%;
+		}
+
+		& div {
+			position: absolute;
+			top: -54%;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			text-align: center;
+
+			// 480
+			@include phoneR {
+				top: -89%;
+			}
+		}
+		& h2 {
+			// if you don't set display inline h2 becomes a block element that blocks out the border of header.major
+			display: inline;
+			// position: absolute;
+			font-family: $portfolioHeaderFontFamily;
+			font-size: $portfolioHeaderFontSize;
+			background: $portfolioHeaderColourBack;
+			// set the background colour of the h2 to match the background of the section.portfolio so it appears the line is chopped there... may require z-index
+			// top: -57%;
+			// left: 44%;
+			padding: 1% 2% 1% 2%;
+		}
+	}
+}
+
 @mixin beforeIconPlace041615a($content) {
 	// $content must be a string... in the form of '\f01d'
 	// what will change each time you use it is the Unicode for content: ''
@@ -151,6 +192,7 @@
 }
 
 @mixin pointArrowHighlights041815a($borderWidth,$colour) {
+	// HIGHLIGHTS
 	// this is the arrow code for the icons for Highlights section
 	// this could also be ::after or ::before though it doesn't matter because we're using absolute positioning
 	// aparrently ::before works better however that may affect the Font Awesome icon
@@ -164,19 +206,45 @@
 }
 
 @mixin pointArrowDate041815a($borderWidth,$colour) {
+	// FOOTER > RECENT POSTS > DATE
 	// this is the arrow code for the .date blocks in the section.recentPosts in footer.scss
 	&::after {
 		content: " ";
 		position: absolute;
 		@include csshexagon041715a($borderWidth,transparent,transparent,$colour,transparent);
 		top: 0;
-		left: 93%;
+		left: 92%;
 		z-index:2;
 
-		@include phabletSpecial032615V1 {
-			top: -2%;
-			left: 93%; 
+		// 1024
+		@include ipadAir1024PortR {
+			top: 16%;
+			left: 98%;
 		}
+
+		@include ipadAir1024R {
+			top: 16%;
+			left: 98%;
+		}
+
+		// 720-768
+		// @include phabletSpecial032615V1 {
+		// 	top: -2%;
+		// 	left: 93%; 
+		// }
+		
+		// 768
+		@include tabletR {
+			top: 19%;
+		}
+
+		// 667
+		@include iphone6Plus667R {
+			top: 16%;
+		}
+		
+		
+		
 	}
 }
 

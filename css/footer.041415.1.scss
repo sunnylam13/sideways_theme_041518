@@ -47,6 +47,12 @@ section.footer {
 	
 	& section.recentPosts {
 		@include column(8);
+
+		// 667
+		@include iphone6Plus667R {
+			@include column(12);
+		}
+
 		& h2 {
 			margin-bottom: 7%;
 		}
@@ -57,6 +63,8 @@ section.footer {
 			align-items: baseline;
 			border-bottom: $recentPostBorder;
 			margin-top: 5%;
+
+			// DATE META DATA  ------------------------------------------------
 			& .date {
 				// @include column(2);
 				// @include column(1.3);
@@ -69,6 +77,21 @@ section.footer {
 				position: relative;
 				padding: 0% 2% 0.5% 2%;
 				
+				// 768
+				@include tabletR {
+					height: 6%;
+				}
+
+				// 736
+				@include iphone6Plus736R {
+					height: 15%;
+				}
+
+				// 480
+				@include phoneR {
+					height: 18%;
+				}
+
 				& p.month {
 					font-size: $recentPostFontSizeMonth;
 					// remove the extra margin that pushes p.day down
@@ -81,28 +104,41 @@ section.footer {
 				}
 
 				@include pointArrowDate041815a(1.875em,$recentPostDateBack);
-			}
-			// & .rightPointer {
-			// 	// this is for the right pointer
-			// 	// @include column(1);
-			// 	// flex-grow: 1;
-			// 	position: absolute;
-			// 	@include csshexagon041715a(1.875em,transparent,transparent,$recentPostDateBack,transparent);
-			// 	// height: 100%;
-			// 	// margin-left: -2.3%;
-			// 	top: 0;
-			// 	left: 93%;
-			// 	z-index:2;
 
-			// 	@include phabletSpecial032615V1 {
-			// 		top: -2%;
-			// 		left: 93%; 
-			// 	}
-			// }
+				// @include desktopR {
+				// 	@include pointArrowDate041815a(1.25em,$recentPostDateBack);
+				// }
+				
+				// 1024
+				@include ipadAir1024PortR {
+					@include pointArrowDate041815a(1.25em,$recentPostDateBack);
+				}
+				@include ipadAir1024R {
+					@include pointArrowDate041815a(1.25em,$recentPostDateBack);
+				}
+
+
+			}
+			// // END DATE META DATA ------------------------------------------------
+			
+			
+			// COPY TEXT  ------------------------------------------------
 			& .copy {
 				@include column(10);
 				position: relative;
 				z-index: 1;
+
+				// 667
+				@include iphone6Plus667R {
+					@include column(10);
+				}
+
+				// 480
+				@include phoneR {
+					@include column(9);
+					margin-bottom: 5%;
+				}
+
 				& h3 {
 					color: $recentPostHeadlineColour;
 					letter-spacing: 2px;
@@ -114,6 +150,8 @@ section.footer {
 					font-size: $recentPostFontSizeText;
 				}
 			}
+			// // END COPY TEXT ------------------------------------------------
+			
 		}
 	}
 
@@ -124,15 +162,33 @@ section.footer {
 	& section.aboutThis {
 		@include column(4);
 		text-align: left;
+
+		// 667
+		@include iphone6Plus667R {
+			@include column(12);
+			margin-top: 8%;
+			margin-bottom: 5%;
+		}
+
 		& h2 {
 			color: $aboutHeadlineColour;
 			letter-spacing: 2px;
 			margin-bottom: 15%;
 			text-align: left;
+
+			// 667
+			@include iphone6Plus667R {
+				margin-bottom: 5%;
+			}
 		}
 		& img {
 			width: 100%;
 			margin-bottom: 10%;
+
+			// 667
+			@include iphone6Plus667R {
+				margin-bottom: 5%;
+			}
 		}
 		& p {
 			font-size: $recentPostFontSizeText;
@@ -154,6 +210,12 @@ section.footer {
 	// MORE LINKS  ------------------------------------------------
 	section.moreLinks {
 		@include column(4);
+
+		// 667
+		@include iphone6Plus667R {
+			@include column(6);
+		}
+
 		& li {
 			// border-bottom: $recentPostBorder;
 			margin-top: 3%;
@@ -173,6 +235,13 @@ section.footer {
 	// CONTACT INFO  ------------------------------------------------
 	section.contactInfo {
 		@include column(4);
+
+		// 667
+		@include iphone6Plus667R {
+			@include column(12);
+			margin-top: 5%;
+		}
+
 		& .address,.mail,.phone {
 			margin: 0;
 			padding: 0;
@@ -201,6 +270,14 @@ section.footer {
 			@include column(8);
 			
 		}
+
+		& h2 {
+			// 667
+			@include iphone6Plus667R {
+				margin-bottom: 5%;
+			}
+		}
+
 		& h3 {
 			margin: 0;
 			padding: 0;
@@ -210,6 +287,7 @@ section.footer {
 		}
 		& a {
 			text-decoration: underline;
+			font-size: $contactFontSize;
 			&:hover {
 				text-decoration: none;
 			}
@@ -229,11 +307,18 @@ section.footer {
 
 	}
 
+	// SOCIAL MEDIA ICONS  ------------------------------------------------
+	
 	section.contactInfo ul.socialIcons {
 		@include flexboxSettings041715a;
 		justify-content: flex-start;
 		align-content: flex-start;
 		margin-bottom: 10%;
+
+		// 667
+		@include iphone6Plus667R {
+			margin-bottom: 5%;
+		}
 
 		& a {
 			// to centre the icons
@@ -251,6 +336,11 @@ section.footer {
 			margin-right: $marginSpacing;
 			// margin-left: $marginSpacing;
 			
+			// 768
+			@include tabletR {
+				margin-bottom: 15%;
+			}
+
 			&.fa-facebook {
 				background: $socialFacebook;
 				@include transitionEffectAllEaseIn(0.3s);
@@ -279,6 +369,8 @@ section.footer {
 		}
 	}
 
+	// // END SOCIAL MEDIA ICONS ------------------------------------------------
+	
 	// // END CONTACT INFO ------------------------------------------------
 }
 
