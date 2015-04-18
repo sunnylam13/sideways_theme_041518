@@ -22,11 +22,11 @@ mixin highlightUnit041415a
 
 section.highlights
 	.wrapper.clearfix
-		.hl_sections.clearfix.clearfix
+		.hl_sections.clearfix
 			+highlightUnit041415a
 				section.hl_block.special1.clearfix
 					span.fa.fa-gears.fa-5x
-						.downpointer
+						//- .downpointer
 					h2 Lorem ipsum
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
 			//- the left and right side borders are used for the central unit with box shadow as well for emphasis
@@ -34,13 +34,14 @@ section.highlights
 				//- if I add .clearfix here after .special2 the highlightBoxShadow041515b SCSS mixin breaks
 				section.hl_block.special2
 					span.fa.fa-fire.fa-5x
-						.downpointer
+						//- .downpointer
 					h2 Lorem ipsum dolor
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
 			+highlightUnit041415a
 				section.hl_block.special3.clearfix
-					span.fa.fa-adjust.fa-5x.clearfix
-						.downpointer
+					//- weirdly if you apply the .clearfix on this span, the pointer doesn't show up
+					span.fa.fa-adjust.fa-5x
+						//- .downpointer
 					h2 Lorem ipsum
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
 		.row.clearfix

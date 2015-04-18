@@ -35,24 +35,19 @@ section.highlights {
 		
 		& span.fa {
 			color: $highlightIconColour;
-			// padding: 3% 3% 3% 3%;
 			width: 2em;
 			height: 2em;
 			// match the line height to the height of the element and it should align everything vertically again
 			line-height: 2em;
 			border-radius: 5px;
-			// display: flex;
-			// justify-content: center;
-			// align-items: center;
 			position: relative;
-			// setting z-index doesn't help because the white background is still blocked
-			// z-index: 2;
 
-			& .downpointer {
-				position: absolute;
-				bottom: -74%;
-				// z-index: 1;
-			}
+			// code if you're not using ::before or ::after
+			// & .downpointer {
+			// 	position: absolute;
+			// 	bottom: -74%;
+			// 	// z-index: 1;
+			// }
 		}
 
 		// END ICON ------------------------------------------------
@@ -71,35 +66,51 @@ section.highlights {
 			padding: 0 5% 0 5%;
 		}
 	}
+	// ICON BLOCK LEFT  ------------------------------------------------
 	& .special1 {
+		// ICON
 		& span.fa {
 			background: $highlightImage1;
-			& .downpointer {
-				@include csshexagon041715a($downArrowBorderWidth,$highlightImage1,transparent,transparent,transparent);
-			}
+			@include pointArrowHighlights041815a($downArrowBorderWidth,$highlightImage1);
+			// & .downpointer {
+			// 	@include csshexagon041715a($downArrowBorderWidth,$highlightImage1,transparent,transparent,transparent);
+			// }
 		}
 		
 	}
+	// // END ICON LEFT ------------------------------------------------
+	
+	// ICON BLOCK CENTRE  ------------------------------------------------
 	& .special2 {
 		position: relative;
+		@include highlightBoxShadow041515b($highlightColourBlockShadow,-19px,22px,-25px);
+		// ICON
 		& span.fa {
 			background: $highlightImage2;
-		}
-		
-		@include highlightBoxShadow041515b($highlightColourBlockShadow,-19px,22px,-25px);
-
-		& .downpointer {
-			@include csshexagon041715a($downArrowBorderWidth,$highlightImage2,transparent,transparent,transparent);
-		}
+			@include pointArrowHighlights041815a($downArrowBorderWidth,$highlightImage2);
+			// & .downpointer {
+			// 	@include csshexagon041715a($downArrowBorderWidth,$highlightImage2,transparent,transparent,transparent);
+			// }
+		}		
 	}
+	// // END ICON CENTRE ------------------------------------------------
+	
+	// ICON BLOCK RIGHT  ------------------------------------------------
 	& .special3 {
+		// ICON
 		& span.fa {
 			background: $highlightImage3;
-			& .downpointer {
-				@include csshexagon041715a($downArrowBorderWidth,$highlightImage3,transparent,transparent,transparent);
-			}
+			
+			@include pointArrowHighlights041815a($downArrowBorderWidth,$highlightImage3);
+
+			// & .downpointer {
+			// 	@include csshexagon041715a($downArrowBorderWidth,$highlightImage3,transparent,transparent,transparent);
+			// }
 		}
 	}
+	// // END RIGHT ------------------------------------------------
+	
+	// BUTTONS, ACTION  ------------------------------------------------
 	& .row {
 		display: flex;
 		justify-content: center;
@@ -130,6 +141,8 @@ section.highlights {
 			}
 		}
 	}
+	// // END BUTTONS, ACTION ------------------------------------------------
+	
 }
 
 ///////////////////////////////////////////////

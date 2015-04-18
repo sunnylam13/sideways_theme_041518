@@ -42,6 +42,19 @@ mixin recentPostEntry041715a
 				h3 Lorem ipsum dolor sit amet
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.
 
+mixin recentPostEntry041815a
+	//- this version is for CSS Hexagons or shapes to create a right pointing arrow for the date
+	//- we discard the .rightPointer in favour of using CSS to handle it
+	li
+		.date
+			p.month Mar
+			p.day 09
+			//- .rightPointer
+		.copy
+			a(href="#")
+				h3 Lorem ipsum dolor sit amet
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.
+
 mixin recentPosts041415a
 	if block
 		block
@@ -64,11 +77,16 @@ mixin recentPosts041615a
 			//- +recentPostEntry041615a
 			//- +recentPostEntry041615a
 			//- +recentPostEntry041615a
-			+recentPostEntry041715a
-			+recentPostEntry041715a
-			+recentPostEntry041715a
-			+recentPostEntry041715a
-			+recentPostEntry041715a
+			//- +recentPostEntry041715a
+			//- +recentPostEntry041715a
+			//- +recentPostEntry041715a
+			//- +recentPostEntry041715a
+			//- +recentPostEntry041715a
+			+recentPostEntry041815a
+			+recentPostEntry041815a
+			+recentPostEntry041815a
+			+recentPostEntry041815a
+			+recentPostEntry041815a
 			
 
 mixin aboutThis041415a

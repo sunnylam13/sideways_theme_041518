@@ -138,5 +138,47 @@
 	}
 }
 
+@mixin pointArrowReference041815a {
+	// this is purely for reference
+	// to adapt it you'd have to swap out the csshexagon include for the correct direction... the absolute positioning would also change
+	&::before {
+		content: " ";
+		position: absolute;
+		@include csshexagon041715a(1.875em,transparent,$subnavcolourback,transparent,transparent);
+		top: -60px;
+		right: 36%;
+	}
+}
+
+@mixin pointArrowHighlights041815a($borderWidth,$colour) {
+	// this is the arrow code for the icons for Highlights section
+	// this could also be ::after or ::before though it doesn't matter because we're using absolute positioning
+	// aparrently ::before works better however that may affect the Font Awesome icon
+	&::after {
+		content: " ";
+		position: absolute;
+		@include csshexagon041715a($borderWidth,$colour,transparent,transparent,transparent);
+		bottom: -76%;
+		right: 0;
+	}
+}
+
+@mixin pointArrowDate041815a($borderWidth,$colour) {
+	// this is the arrow code for the .date blocks in the section.recentPosts in footer.scss
+	&::after {
+		content: " ";
+		position: absolute;
+		@include csshexagon041715a($borderWidth,transparent,transparent,$colour,transparent);
+		top: 0;
+		left: 93%;
+		z-index:2;
+
+		@include phabletSpecial032615V1 {
+			top: -2%;
+			left: 93%; 
+		}
+	}
+}
+
 
 ///////////////////////////////////////////////

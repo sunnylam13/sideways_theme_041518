@@ -55,20 +55,17 @@ section.blog {
 
 		// LINK BUTTONS  ------------------------------------------------
 		& .text a {
-			// display: inline-block;
-			// font-family: $blogFontFamilyLink;
-			// font-size: $blogFontSizeLink;
-			// color: $blogFontColourLink;
-			// padding: 2% 8% 2% 8%;
-			// margin-right: 2%;
-			// margin-left: 2%;
-			// border-radius: 5px;
 
 			@include standardLinkStyle041715a($blogFontSizeLink,$blogFontFamilyLink,$blogFontColourLink,red,red);
 
 			// since the a has a class of .readMore you can't use a .readMore which means seek a child div with class .readMore in an a... you must use a.readMore which is &.readMore not & .readMore
 			&.readMore {
 				background: $blogColourBackLink1;
+
+				@include desktopR {
+					margin-bottom: 3%;
+				}
+
 				&:hover {
 					background: $blogColourBackHoverLink1;
 				}

@@ -79,19 +79,26 @@ section.footer {
 					font-weight: bold;
 					margin: 0;
 				}
+
+				@include pointArrowDate041815a(1.875em,$recentPostDateBack);
 			}
-			& .rightPointer {
-				// this is for the right pointer
-				// @include column(1);
-				// flex-grow: 1;
-				position: absolute;
-				@include csshexagon041715a(1.875em,transparent,transparent,$recentPostDateBack,transparent);
-				// height: 100%;
-				// margin-left: -2.3%;
-				top: 0;
-				left: 93%;
-				z-index:2;
-			}
+			// & .rightPointer {
+			// 	// this is for the right pointer
+			// 	// @include column(1);
+			// 	// flex-grow: 1;
+			// 	position: absolute;
+			// 	@include csshexagon041715a(1.875em,transparent,transparent,$recentPostDateBack,transparent);
+			// 	// height: 100%;
+			// 	// margin-left: -2.3%;
+			// 	top: 0;
+			// 	left: 93%;
+			// 	z-index:2;
+
+			// 	@include phabletSpecial032615V1 {
+			// 		top: -2%;
+			// 		left: 93%; 
+			// 	}
+			// }
 			& .copy {
 				@include column(10);
 				position: relative;

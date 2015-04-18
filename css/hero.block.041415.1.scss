@@ -105,6 +105,114 @@
 	/////////////////////////////////////////////////
 }
 
+@mixin sectionHeroBlock041515a {
+	section.heroblock {
+		position: relative;
+		z-index: 2;
+		& ul {
+			margin: 0;
+			padding: 0;
+		}
+		& ul li a img {
+			max-width: 100%;
+			z-index: 1;
+			// height: 60%;
+		}
+
+		& .meta {
+			position: absolute;
+			z-index: 1;
+			background: $heroblockcolourback;
+			top: 35%;
+			left: 21.5%;
+			padding: 2% 5% 1% 5%;
+			border-radius: 5px;
+			text-align: center;
+			// @include column(12);
+			& h1 {
+				font-size: $heroblockfontsizeheader;
+				font-family: $heroblockfontsizefontfamily;
+				color: $heroblockcolour;
+			}
+			& p.subhead {
+				font-size: $heroblockfontsize;
+				color: $heroblockcoloursubhead;
+			}
+		}
+
+		// NOTE:  This adjusted bxslider code must be put within the specific section otherwise you'll have to overwrite it later on when you use the same slider mechanism elsewhere...  Like the store page...
+
+		@include imageSliderMainHead033015a;
+	}
+}
+
+@mixin sectionHeroBlock041715a {
+	section.heroblock {
+		position: relative;
+		z-index: 2;
+		& ul {
+			margin: 0;
+			padding: 0;
+		}
+		& ul li a img {
+			max-width: 100%;
+			z-index: 1;
+			// height: 60%;
+		}
+
+		& .metaHolder {
+			position: absolute;
+			z-index: 3000;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			text-align: center;
+
+			// vertically and horizontally align .meta
+			// this overwrites text-align above
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		& .meta {
+			// make it inline block so you can centre it
+			display: inline-block;
+			// position: absolute;
+			// z-index: 1;
+			background: $heroblockcolourback;
+
+			// top: 35%;
+			// left: 21.5%;
+			padding: 2% 5% 1% 5%;
+			border-radius: 5px;
+			text-align: center;
+			// width: 100%;
+			// using max-width prevents the div from staying the same size as the screen size shrinks
+			max-width: 80%;
+
+			@include desktopR {
+				max-width: 80%;
+			}
+
+			& h1 {
+				font-size: $heroblockfontsizeheader;
+				font-family: $heroblockfontsizefontfamily;
+				color: $heroblockcolour;
+			}
+			& p.subhead {
+				font-size: $heroblockfontsize;
+				color: $heroblockcoloursubhead;
+			}
+		}
+
+		// NOTE:  This adjusted bxslider code must be put within the specific section otherwise you'll have to overwrite it later on when you use the same slider mechanism elsewhere...  Like the store page...
+
+		@include imageSliderMainHead033015a;
+	}
+}
+
 ////////////////////////////////////////////
 
 ////////////////////////////////////////////
@@ -114,42 +222,17 @@
 // this is where the banner image would go
 // instead I may insert a 3 image slider instead
 
-section.heroblock {
-	position: relative;
-	z-index: 2;
-	& ul {
-		margin: 0;
-		padding: 0;
-	}
-	& ul li a img {
-		max-width: 100%;
-		z-index: 1;
-		// height: 60%;
-	}
+// VERSION 1  ------------------------------------------------
 
-	& .meta {
-		position: absolute;
-		z-index: 1;
-		background: $heroblockcolourback;
-		top: 35%;
-		left: 21.5%;
-		padding: 2% 5% 1% 5%;
-		border-radius: 5px;
-		text-align: center;
-		& h1 {
-			font-size: $heroblockfontsizeheader;
-			font-family: $heroblockfontsizefontfamily;
-			color: $heroblockcolour;
-		}
-		& p.subhead {
-			font-size: $heroblockfontsize;
-			color: $heroblockcoloursubhead;
-		}
-	}
+// @include sectionHeroBlock041515a;
 
-	// NOTE:  This adjusted bxslider code must be put within the specific section otherwise you'll have to overwrite it later on when you use the same slider mechanism elsewhere...  Like the store page...
+// // END VERSION 1 ------------------------------------------------
 
-	@include imageSliderMainHead033015a;
-}
+// VERSION 2  ------------------------------------------------
+
+@include sectionHeroBlock041715a;
+
+// // END VERSION 2 ------------------------------------------------
+
 
 ///////////////////////////////////////////////

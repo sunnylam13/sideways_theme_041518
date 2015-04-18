@@ -6,6 +6,18 @@
 //- 		MIXINS
 //- ===================================
 
+mixin heroBlockTitleBox041715a
+	//- you will make section.heroblock position relative
+	//- you will make the .metaHolder position absolute
+	//- you will stretch .meta to all corners of the section
+	//- then you will text align everything
+	.metaHolder
+		.meta
+			h1 There's A 
+				span Sideways Street 
+				| On Every Path
+			p.subhead A Responsive Template by Sunny Lam
+
 mixin flexImageTemplate041515a
 	//- for use with the Javascript slider... each time a li is used it is an image slide
 	li
@@ -19,6 +31,14 @@ mixin flexImageTemplate041515a
 				| On Every Path
 			p.subhead A Responsive Template by Sunny Lam
 
+mixin flexImageTemplate041715a
+	//- for use with the Javascript slider... each time a li is used it is an image slide
+	li
+		a(href="javascript:void(0)")
+			//- img(src="http://lorempixel.com/1440/720", alt="Lorem")
+			img(src="http://lorempixel.com/1440/452", alt="Lorem")
+			//- img(src="../images/bigImage2.jpg", alt="Big Image")
+
 mixin heroblock041415a
 	//- This version is if we don't use a slider
 	//- It will be easier to set the background of the section to the hero image... everything else can be wrapped
@@ -29,10 +49,19 @@ mixin heroblock041415a
 
 mixin heroblock041515a
 	//- This is for a Javascript slider
+	//- for use with sectionHeroBlock041515a in SCSS
 	ul.flexslider#bxslider.clearfix
 		+flexImageTemplate041515a
 		+flexImageTemplate041515a
 		+flexImageTemplate041515a
+
+mixin heroblock041715a
+	//- This is for a Javascript slider
+	//- for use with sectionHeroBlock041515b in SCSS
+	ul.flexslider#bxslider.clearfix
+		+flexImageTemplate041715a
+		+flexImageTemplate041715a
+		+flexImageTemplate041715a
 
 //- END MIXINS
 
@@ -44,7 +73,19 @@ section.heroblock
 	//- we don't want to apply a wrapper here because we want the image to span the width of the screen
 	//- .wrapper.clearfix
 	//- +heroblock041415a
-	+heroblock041515a
+	//- +heroblock041515a
+	//- ===================================
+	//- 		HERO BLOCK TITLE TEXT
+	//- ===================================
+	//- by separating out the text from the images on the slider and setting it up so I can use text-align
+	+heroBlockTitleBox041715a
+	//- END HERO BLOCK TITLE TEXT
+	
+	//- ===================================
+	//- 		SLIDER
+	//- ===================================
+	+heroblock041715a
+	//- END SLIDER
 
 //- END MAIN CODE
 
