@@ -22,24 +22,28 @@ mixin highlightUnit041415a
 
 section.highlights
 	.wrapper.clearfix
-		.hl_sections
+		.hl_sections.clearfix.clearfix
 			+highlightUnit041415a
-				section.hl_block.special1
+				section.hl_block.special1.clearfix
 					span.fa.fa-gears.fa-5x
+						.downpointer
 					h2 Lorem ipsum
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
 			//- the left and right side borders are used for the central unit with box shadow as well for emphasis
 			+highlightUnit041415a
+				//- if I add .clearfix here after .special2 the highlightBoxShadow041515b SCSS mixin breaks
 				section.hl_block.special2
 					span.fa.fa-fire.fa-5x
+						.downpointer
 					h2 Lorem ipsum dolor
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
 			+highlightUnit041415a
-				section.hl_block.special3
-					span.fa.fa-adjust.fa-5x
+				section.hl_block.special3.clearfix
+					span.fa.fa-adjust.fa-5x.clearfix
+						.downpointer
 					h2 Lorem ipsum
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusamus, eum quo minus harum a placeat!
-		.row
+		.row.clearfix
 			+standardLinkButton041415a('Jump on It','#','jumpOnIt')
 			+standardLinkButton041415a('Learn More','#','learnMore')
 

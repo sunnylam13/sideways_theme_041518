@@ -246,16 +246,28 @@ section.footer {
 			
 			&.fa-facebook {
 				background: $socialFacebook;
+				@include transitionEffectAllEaseIn(0.3s);
+				@include socialIconHoverChange041715a($socialFacebook);
 			}
-			&.fa-dribble {}
-			&.fa-twitter {
+			&.fa-dribble {
 				background: $socialDribble;
+				@include transitionEffectAllEaseIn(0.3s);
+				@include socialIconHoverChange041715a($socialDribble);
+			}
+			&.fa-twitter {
+				background: $socialTwitter;
+				@include transitionEffectAllEaseIn(0.3s);
+				@include socialIconHoverChange041715a($socialTwitter);
 			}
 			&.fa-linkedin {
 				background: $socialLinkedIn;
+				@include transitionEffectAllEaseIn(0.3s);
+				@include socialIconHoverChange041715a($socialLinkedIn);
 			}
 			&.fa-google-plus {
 				background: $socialGooglePlus;
+				@include transitionEffectAllEaseIn(0.3s);
+				@include socialIconHoverChange041715a($socialGooglePlus);
 			}
 		}
 	}
@@ -266,12 +278,23 @@ section.footer {
 	// COPYRIGHT  ------------------------------------------------
 	section.copyright {
 		font-size: $copyrightFontSize;
+		// need to set the section to 100% to give ul flexbox room to work
+		width: 100%;
 		// color: $copyrightColour;
+		& .centreDiv {
+			display: inline-block;
+			width: auto;
+			margin: 0 auto;
+		}
 		& ul {
 			@include flexboxSettings041715a;
-			justify-content: none;
+			// need to set the ul to width 100% so that flexbox has space
+			width: 100%;
+			// I needed to remove the justify-content by setting it to none to get rid of the weird spacing between the li elements...  I used the ::after "|" content with its own margins as the separator
+			justify-content: center;
 			// background: $copyrightColourBack;
 			padding: 3% 5% 3% 5%;
+			margin: 0 auto;
 		}
 		& li {
 			// $marginSpacing: 2%;

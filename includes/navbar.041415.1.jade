@@ -6,10 +6,21 @@
 //- 		MIXINS
 //- ===================================
 
+mixin subnavmenu041715a
+	ul.subnavmenu1.clearfix
+		+linkTemplate033115a('#','Lorem ipsum dolor')
+		+linkTemplate033115a('#','Lorem ipsum dolor')
+		+linkTemplate033115a('#','Lorem ipsum dolor')
+		+linkTemplate033115a('#','Lorem ipsum dolor')
+		+linkTemplate033115a('#','Lorem ipsum dolor')
+
 mixin navbar041415a
-	ul.navbar
+	ul.navbar.clearfix
 		+linkTemplate033115a('#','Home')
 		+linkTemplate033115a('#','Dropdown')
+			li
+				a(href="#") Dropdown
+				+subnavmenu041715a
 		+linkTemplate033115a('#','Left Sidebar')
 		+linkTemplate033115a('#','Right Sidebar')
 		+linkTemplate033115a('#','No Sidebar')

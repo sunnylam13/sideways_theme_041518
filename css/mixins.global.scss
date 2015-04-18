@@ -1,0 +1,142 @@
+////////////////////////////////////////////
+///// 		MIXINS GLOBAL
+///////////////////////////////////////////////
+
+// all mixins that are not universal ones... that are specific to this project are placed here
+// don't forget to include the $ in front of the variables
+
+@mixin sectionMargins041515($marginTop, $marginBottom) {
+	// where arguments are a value in px, em or %
+	margin-top: $marginTop;
+	margin-bottom: $marginBottom;
+}
+
+@mixin sectionPadding041515($padTop, $padBottom) {
+	// where arguments are a value in px, em or %
+	padding-top: $padTop;
+	padding-bottom: $padBottom;
+}
+
+@mixin highlightBoxShadow041515a($colour) {
+	// to accomplish a kind of shadow on only the left and right side... with some top, bottom bleed
+	// box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+	box-shadow: 12px 0 15px -4px $colour, -12px 0 8px -4px $colour;
+}
+
+@mixin highlightBoxShadow041515b($colour,$hor,$blur,$spread) {
+	// to accomplish a kind of shadow on only the left and right side...
+	// in SCSS this must be within the target element as it uses & 
+	// NOTE:  you must remember to set the target element to be position relative or this won't work right
+	// box-shadow: Hpx Vpx Blurpx spreadR green;
+	
+	&:before {
+		box-shadow: $hor 0 $blur $spread inset;
+		    content: " ";
+	    height: 100%;
+	    left: -15px;
+	    position: absolute;
+	    top: 0;
+	    width: 15px;
+	}
+	// NOTE:  It appears that the :after may be pushed down for some reason from unknown top properties... you may have to add a top: 0 after you use this mixin in order to fix it...  if this is a common problem I may add it here instead.
+	&:after {
+		box-shadow: $hor 0 $blur $spread inset;
+		    content: " ";
+	    top: 0;
+	    height: 100%;
+	    position: absolute;
+	    right: -15px;
+	    width: 15px;
+	}
+}
+
+@mixin flexboxSettings041615a {
+	// this must be used within a parent element
+	// the div.flexbox must be used or some sort of wrapping parent element
+	& .flexbox {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-content: center;
+		align-items: center;
+	}
+}
+
+@mixin flexboxSettings041715a {
+	// this is used within a parent without the class .flexbox... the actual class name used will vary
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+
+@mixin headerMajor041615a($borderStyle,$fontfamily,$fontsize,$backColor) {
+	// HEADER MAJOR SECTION STYLING
+	// this code must be placed within the styling for a parent
+	& header.major {
+		border-top: $portfolioBorderMajor;
+		position: relative;
+		padding-bottom: 5%;
+		& h2 {
+			position: absolute;
+			font-family: $portfolioHeaderFontFamily;
+			font-size: $portfolioHeaderFontSize;
+			background: $portfolioHeaderColourBack;
+			// set the background colour of the h2 to match the background of the section.portfolio so it appears the line is chopped there... may require z-index
+			top: -57%;
+			left: 44%;
+			padding: 1% 2% 1% 2%;
+		}
+	}
+}
+
+@mixin beforeIconPlace041615a($content) {
+	// $content must be a string... in the form of '\f01d'
+	// what will change each time you use it is the Unicode for content: ''
+
+	// to make this work you have to use the FontAwesome font and the content must be the icon's Unicode (available at FA's website)
+	// http://stackoverflow.com/questions/18793428/put-an-icon-after-list-item-with-after-and-font-awesome
+	content: $content;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	margin:0px 20px 0px 0px;
+	text-decoration:none;
+}
+
+@mixin csshexagon041715a($borderWidth,$top,$bottom,$left,$right) {
+	// you should insert this within a div of some sort to create this
+	// set no height
+	// if you want a triangle pointing in a specific direction set the colour of the border opposite to it
+	// set all other borders to transparent
+	width: 0;
+	border-top: $borderWidth solid $top;
+	border-bottom: $borderWidth solid $bottom;
+	border-left: $borderWidth solid $left;
+	border-right: $borderWidth solid $right;
+}
+
+@mixin standardLinkStyle041715a($fontsize,$fontfamily,$fontcolour,$backColour,$backColourHover) {
+	display: inline-block;
+	font-size: $fontsize;
+	font-family: $fontfamily;
+	color: $fontcolour;
+	padding: 2% 8% 2% 8%;
+	margin-right: 2%;
+	margin-left: 2%;
+	border-radius: 5px;
+	background: $backColour;
+	&:hover {
+		background: $backColourHover;
+	}
+}
+
+@mixin socialIconHoverChange041715a($backColour) {
+	&:hover {
+		background: darken($backColour,25%);
+	}
+}
+
+
+///////////////////////////////////////////////

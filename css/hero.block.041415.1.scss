@@ -116,17 +116,20 @@
 
 section.heroblock {
 	position: relative;
+	z-index: 2;
 	& ul {
 		margin: 0;
 		padding: 0;
 	}
 	& ul li a img {
 		max-width: 100%;
+		z-index: 1;
 		// height: 60%;
 	}
 
 	& .meta {
 		position: absolute;
+		z-index: 1;
 		background: $heroblockcolourback;
 		top: 35%;
 		left: 21.5%;

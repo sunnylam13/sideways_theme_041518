@@ -44,13 +44,22 @@ section.highlights {
 			// display: flex;
 			// justify-content: center;
 			// align-items: center;
+			position: relative;
+			// setting z-index doesn't help because the white background is still blocked
+			// z-index: 2;
+
+			& .downpointer {
+				position: absolute;
+				bottom: -74%;
+				// z-index: 1;
+			}
 		}
 
 		// END ICON ------------------------------------------------
 		
 		
 		& h2 {
-			margin-top: 10%;
+			margin-top: 15%;
 			margin-bottom: 10%;
 			font-size: $highlightFontSizeHeader;
 			letter-spacing: 2px;
@@ -65,6 +74,9 @@ section.highlights {
 	& .special1 {
 		& span.fa {
 			background: $highlightImage1;
+			& .downpointer {
+				@include csshexagon041715a($downArrowBorderWidth,$highlightImage1,transparent,transparent,transparent);
+			}
 		}
 		
 	}
@@ -73,17 +85,19 @@ section.highlights {
 		& span.fa {
 			background: $highlightImage2;
 		}
-		// border-left: 1px solid $highlightColourBlockBorder;
-		// border-right: 1px solid $highlightColourBlockBorder;
-		// @include highlightBoxShadow041515a($highlightColourBlockShadow);
+		
 		@include highlightBoxShadow041515b($highlightColourBlockShadow,-19px,22px,-25px);
-		&:after {
-			top: 0;
+
+		& .downpointer {
+			@include csshexagon041715a($downArrowBorderWidth,$highlightImage2,transparent,transparent,transparent);
 		}
 	}
 	& .special3 {
 		& span.fa {
 			background: $highlightImage3;
+			& .downpointer {
+				@include csshexagon041715a($downArrowBorderWidth,$highlightImage3,transparent,transparent,transparent);
+			}
 		}
 	}
 	& .row {

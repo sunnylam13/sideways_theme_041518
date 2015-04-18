@@ -7,7 +7,7 @@
 //- ===================================
 
 mixin blogEntry041415a
-	section.blog_entry
+	section.blog_entry.clearfix
 		img(src="http://lorempixel.com/600/300", alt="Lorem Picture Placeholder")
 		.text
 			h3 Lorem ipsum dolor sit
@@ -23,7 +23,7 @@ mixin blogEntry041415a
 
 section.blog
 	.wrapper.clearfix
-		header.major
+		header.major.clearfix
 			h2 The Blog
 		.flexbox.clearfix
 			+blogEntry041415a

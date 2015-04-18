@@ -48,7 +48,7 @@ mixin recentPosts041415a
 	else
 		section.recentPosts
 			h2 Lorem ipsum dolor.
-			ul
+			ul.clearfix
 				+recentPostEntry041415a('Mar','09','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
 				+recentPostEntry041415a('Mar','07','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
 				+recentPostEntry041415a('Mar','05','Lorem ipsum dolor sit amet','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nam harum sequi modi maxime dolorum.')
@@ -58,7 +58,7 @@ mixin recentPosts041415a
 mixin recentPosts041615a
 	section.recentPosts
 		h2 Lorem ipsum dolor.
-		ul
+		ul.clearfix
 			//- +recentPostEntry041615a
 			//- +recentPostEntry041615a
 			//- +recentPostEntry041615a
@@ -105,12 +105,12 @@ mixin moreLinksBlock041415a
 				+linkTemplate033115a('#','Lorem ipsum dolor sit amet, consectetur adipisicing.')
 
 mixin contactInfo041415a
-	section.contactInfo
+	section.contactInfo.clearfix
 		h2 Contact Information
 		//- you can apply flexbox on this ul as well
 		//- if you apply the higher level .row you'll screw things up unless you change the class to be something else
-		.social_icons
-			ul.socialIcons
+		.social_icons.clearfix
+			ul.socialIcons.clearfix
 				li
 					a(href=facebookLink).facebook
 						span.fa.fa-facebook
@@ -126,19 +126,19 @@ mixin contactInfo041415a
 				li
 					a(href=googlePlusLink).gplus
 						span.fa.fa-google-plus
-		.address
+		.address.clearfix
 			.col1
 				h3 Address
 			.col2
 				p The Incorporated
 				p 1234 This Where Road Suite
 				p Toronto, ON M8C 1D4
-		.mail
+		.mail.clearfix
 			.col1
 				h3 Mail
 			.col2
 				a(href="#") someone@untitled.com
-		.phone
+		.phone.clearfix
 			.col1
 				h3 Phone
 			.col2
@@ -150,7 +150,7 @@ mixin contactInfo041715a
 		//- you can apply flexbox on this ul as well
 		//- if you apply the higher level .row you'll screw things up unless you change the class to be something else
 		.social_icons
-			ul.socialIcons
+			ul.socialIcons.clearfix
 				li
 					a(href=facebookLink).facebook
 						span.fa.fa-facebook
@@ -166,19 +166,19 @@ mixin contactInfo041715a
 				li
 					a(href=googlePlusLink).gplus
 						span.fa.fa-google-plus
-		.address
+		.address.clearfix
 			//- .col1
 			h3 Address
 			.col2
 				p The Incorporated
 				p 1234 This Where Road Suite
 				p Toronto, ON M8C 1D4
-		.mail
+		.mail.clearfix
 			//- .col1
 			h3 Mail
 			.col2
 				a(href="#") someone@untitled.com
-		.phone
+		.phone.clearfix
 			//- .col1
 			h3 Phone
 			.col2
@@ -191,7 +191,9 @@ mixin copyrightInfo041415a
 		section.copyright
 			//- can apply flexbox to this ul
 			//- you'll use :before on the 2nd li thereafter to create the divider
-			ul
+			//- add a div that I can centre with margin: 0 auto
+			//- .centreDiv
+			ul.clearfix
 				li &copy; Untitled.  All Rights Reserved.
 				li Design:  
 					a(href=personalWebSite) Sunny Lam
@@ -206,16 +208,16 @@ mixin copyrightInfo041415a
 section.footer
 	.wrapper.clearfix
 		//- apply the flexbox to .row to affect the sections within
-		.row
+		.row.clearfix
 			//- +recentPosts041415a
 			+recentPosts041615a
 			+aboutThis041415a
-		.row
+		.row.clearfix
 			+moreLinksBlock041415a
 			+moreLinksBlock041415a
 			+contactInfo041415a
 			//- +contactInfo041715a
-		.row
+		.row.clearfix
 			+copyrightInfo041415a
 
 ////////////////////////////////////////////
