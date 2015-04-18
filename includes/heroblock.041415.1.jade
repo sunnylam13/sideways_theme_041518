@@ -18,6 +18,19 @@ mixin heroBlockTitleBox041715a
 				| On Every Path
 			p.subhead A Responsive Template by Sunny Lam
 
+mixin heroBlockTitleBox041815a
+	//- you will make section.heroblock position relative
+	//- you will make the .metaHolder position absolute
+	//- you will stretch .meta to all corners of the section
+	//- then you will text align everything
+	.metaHolder
+		.meta
+			h1 There's A 
+				span Sideways Street 
+				| On Every Path
+			p.subhead A Responsive Template by 
+				a(href='http://sunnylam.ca') Sunny Lam
+
 mixin flexImageTemplate041515a
 	//- for use with the Javascript slider... each time a li is used it is an image slide
 	li
@@ -78,7 +91,8 @@ section.heroblock
 	//- 		HERO BLOCK TITLE TEXT
 	//- ===================================
 	//- by separating out the text from the images on the slider and setting it up so I can use text-align
-	+heroBlockTitleBox041715a
+	//- +heroBlockTitleBox041715a
+	+heroBlockTitleBox041815a
 	//- END HERO BLOCK TITLE TEXT
 	
 	//- ===================================

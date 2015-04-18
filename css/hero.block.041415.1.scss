@@ -310,6 +310,51 @@
 					font-size: $heroblockfontsizeheader*0.2;
 				}
 
+				& a {
+					color: $heroblockcolour;
+					// font-size: $heroblockfontsize;
+
+					// color: inherit;
+					font-size: inherit;
+
+					text-decoration: none;
+
+					// // 667
+					// @include iphone6Plus667R {
+					// 	font-size: $heroblockfontsize*0.7;
+					// }
+
+					// // 480
+					// @include phoneR {
+					// 	font-size: $heroblockfontsizeheader*0.4;
+					// 	padding: 0;
+					// }
+
+					// // 414
+					// @include iphone6Plus414R {
+					// 	font-size: $heroblockfontsizeheader*0.3;
+					// }
+
+					// // 375
+					// @include iphone6Plus375R {
+					// 	font-size: $heroblockfontsizeheader*0.25;
+					// }
+
+					// // 272
+					// @include applewatch42mm272R {
+					// 	font-size: $heroblockfontsizeheader*0.2;
+					// }
+
+					&:link {
+						color: $heroblockcolour;
+						text-decoration: none;
+					}
+					&:visited {
+						color: $heroblockcolour;
+						text-decoration: none;
+					}
+				}
+
 			}
 		}
 
