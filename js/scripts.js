@@ -17,11 +17,18 @@ function heroBlockSlider041515a () {
 	});
 }
 
+function dropDownMenuClick041715a () {
+	$('ul.navbar li:nth-child(2) a').on('click', function(event) {
+		event.preventDefault();
+		$('ul.navbar ul.subnavmenu1').toggle('slow');
+	});
+}
 
 //////////////////////////////////////////////////
 // EXECUTION CODE
 
 heroBlockSlider041515a();
+dropDownMenuClick041715a();
 
 //////////////////////////////////////////////////
 
