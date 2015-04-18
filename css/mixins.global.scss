@@ -118,11 +118,36 @@
 
 		& div {
 			position: absolute;
-			top: -54%;
+			top: -50%;
 			bottom: 0;
 			right: 0;
 			left: 0;
 			text-align: center;
+
+			// 1024
+			@include desktopRHD1024 {
+				top: -37%;
+			}
+
+			@include desktopR1024 {
+				top: -39%;
+			}
+
+			// 940+
+			@include desktopR {
+				// top: -27%;
+				top: -42%;
+			}
+
+			// 768
+			@include tabletR {
+				top: -49%;
+			}
+
+			// 720
+			@include phabletR {
+				top: -53%;
+			}
 
 			// 480
 			@include phoneR {
