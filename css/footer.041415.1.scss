@@ -87,6 +87,10 @@ section.footer {
 				position: relative;
 				padding: 0% 2% 0.5% 2%;
 				
+				// &:hover {
+				// 	background: $recentPostDateBackHover;
+				// }
+
 				// 768
 				@include tabletR {
 					height: 6%;
@@ -148,6 +152,7 @@ section.footer {
 					margin: 0;
 				}
 
+				// POINTER ARROW  ------------------------------------------------
 				@include pointArrowDate041815a(1.875em,$recentPostDateBack);
 
 				// @include desktopR {
@@ -161,6 +166,7 @@ section.footer {
 				@include ipadAir1024R {
 					@include pointArrowDate041815a(1.25em,$recentPostDateBack);
 				}
+				// // END POINTER ARROW ------------------------------------------------
 
 
 			}

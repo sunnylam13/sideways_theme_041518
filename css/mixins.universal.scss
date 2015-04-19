@@ -25,6 +25,7 @@
 }
 
 @mixin transformRotate ($degrees) {
+	// where $degrees is x deg
 	-webkit-transform: rotate($degrees);
 	-moz-transform: rotate($degrees);
 	-o-transform: rotate($degrees);
@@ -33,6 +34,8 @@
 }
 
 @mixin transformRotateScale ($degrees,$scaleMult) {
+	// where $degrees is x deg
+	// where $scaleMult is a number like 2 or 3 with no units
 	-webkit-transform: rotate($degrees) scale($scaleMult);
 	-moz-transform: rotate($degrees) scale($scaleMult);
 	-o-transform: rotate($degrees) scale($scaleMult);

@@ -72,6 +72,13 @@ section.highlights {
 			// 	bottom: -74%;
 			// 	// z-index: 1;
 			// }
+			
+			@include transitionEffectAll(0.3s);
+
+			&:hover {
+				// @include transformRotate(720deg);
+				@include transformRotateScale(360deg,1.2);
+			}
 		}
 
 		// END ICON ------------------------------------------------

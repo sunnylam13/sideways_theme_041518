@@ -258,6 +258,10 @@
 		left: 92%;
 		z-index:2;
 
+		// &:hover {
+		// 	border-left: 1.875em solid $recentPostDateBackHover;
+		// }
+
 		// 1024
 		@include ipadAir1024PortR {
 			top: 16%;

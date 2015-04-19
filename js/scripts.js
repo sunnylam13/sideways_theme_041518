@@ -40,13 +40,48 @@ function blogHoverSearchMode041815a () {
 	});
 }
 
+function dateHoverArrowColour041815a () {
+	$('section.recentPosts .date').hover(function() {
+		$(this).css('background', 'rgba(36, 143, 103,0.8)');
+		$(this).find(':after').css('border-left', '1.875em solid rgba(36, 143, 103,0.8)');
+		// $('section.recentPosts .date::after').css('background', 'rgba(36, 143, 103,0.8)');
+	}, function() {
+		$(this).css('background', 'rgba(255, 244, 161,1)');
+		$(this).find(':after').css('border-left', '1.875em solid rgba(255, 244, 161,1)');
+		// $('section.recentPosts .date::after').css('background', 'rgba(255, 244, 161,1)');
+	});
+}
+
+function dateArrowAnimate041815a () {
+	$('section.recentPosts li div.copy').hover(function() {
+		console.log('Hover over...');
+		$(this).parent('li').find('.date').toggle('slide')
+	}, function() {
+		console.log('Hover out...');
+		$(this).parent('li').find('.date').toggle('slide')
+	});
+}
+
+function heroBlockMetaAnimate041815a (argument) {
+	$('.metaHolder').hide();
+	$('.metaHolder').toggle('slide');
+}
+
 //////////////////////////////////////////////////
 // EXECUTION CODE
+
+window.onload = function () {
+	heroBlockMetaAnimate041815a();
+}
 
 heroBlockSlider041515a();
 dropDownMenuClick041715a();
 portfolioHoverSearchMode041815a();
 blogHoverSearchMode041815a();
+// dateHoverArrowColour041815a();
+dateArrowAnimate041815a();
+
+
 
 //////////////////////////////////////////////////
 
