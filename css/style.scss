@@ -43,7 +43,12 @@ body {
 	background: $basebackcolor;
 	position: relative;
 	z-index: 10;
+
+	// /* you set this property on the body, this is Drew's favourite way of making his web site fade into existence */
+	animation: fadeIn 0.6s ease-in;
 }
+
+@include bodyFadeIn041915a;
 
 .wrapper {
 	// max-width: 1200px;
