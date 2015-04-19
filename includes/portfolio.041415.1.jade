@@ -18,6 +18,23 @@ mixin portfolioBlock041415a(classLabels,imgURL,imgAltText)
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iste debitis, voluptates sed repellendus nihil alias, enim, praesentium ex, cum aliquam quod temporibus libero. Placeat animi voluptatibus magni!
 				+linkTemplate033115a("#","Learn More")
 
+mixin portfolioBlock041815a(classLabels,imgURL,imgAltText)
+	//- This version focuses on creating a hidden blur effect using position absolute, z-index and modals?
+	if block
+		block
+	else
+		section(class=classLabels).portfolio_unit
+			//- we could use .imgShaderBox1 as the frame of reference parent which we'll hook the .imgShaderScreen1 to
+			.imgShaderBox1
+				img(src="http://lorempixel.com/400/400", alt="Lorem Picture Placeholder")
+				.imgShaderScreen1
+					//- by placing the span as a child of the screen we can centre it separately
+					span.fa.fa-search
+
+			.text
+				h3 Lorem ipsum dolor sit
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iste debitis, voluptates sed repellendus nihil alias, enim, praesentium ex, cum aliquam quod temporibus libero. Placeat animi voluptatibus magni!
+				+linkTemplate033115a("#","Learn More")
 
 //- END MIXINS
 
@@ -27,11 +44,18 @@ section.portfolio
 			div
 				h2 My Portfolio
 		.flexbox.clearfix
-			+portfolioBlock041415a('video')
-			+portfolioBlock041415a('graphic')
-			+portfolioBlock041415a('web')
-			+portfolioBlock041415a('video')
-			+portfolioBlock041415a('graphic')
-			+portfolioBlock041415a('graphic')
+			//- +portfolioBlock041415a('video')
+			//- +portfolioBlock041415a('graphic')
+			//- +portfolioBlock041415a('web')
+			//- +portfolioBlock041415a('video')
+			//- +portfolioBlock041415a('graphic')
+			//- +portfolioBlock041415a('graphic')
+
+			+portfolioBlock041815a('video')
+			+portfolioBlock041815a('graphic')
+			+portfolioBlock041815a('web')
+			+portfolioBlock041815a('video')
+			+portfolioBlock041815a('graphic')
+			+portfolioBlock041815a('graphic')
 
 ////////////////////////////////////////////

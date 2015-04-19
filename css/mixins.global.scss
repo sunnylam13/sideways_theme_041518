@@ -286,7 +286,42 @@
 		}
 		
 
+
+	}
+}
+
+@mixin imgShaderSetup041815a($height,$shaderBack,$spanFontSize,$spanColour) {
+	// & .imgShaderBox1 {
+	// 	margin: 0;
+	// 	padding: 0;
+	// }
+
+	& .imgShaderScreen1 {
+
+		// the alternative version to this is to use this styling as a hover state on the image...  the span.fa would have to be right after the img and selected with an adjacent ~ selector
 		
+		// where the parent must be position relative... usually insider a .imgShaderBox1
+		// where height must match the height of the img to be overlaid
+
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: $height;
+		position: absolute;
+		top: 0;
+
+		// default display is none
+		// use Javascript to set this to display: flex
+		// display:flex;
+		display:none;
+		justify-content:center;
+		align-items: center;
+
+		background: $shaderBack;
+		& span.fa {
+			font-size: $spanFontSize;
+			color: $spanColour;
+		}
 	}
 }
 

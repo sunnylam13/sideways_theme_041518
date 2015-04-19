@@ -6,7 +6,184 @@
 ///// 		MIXINS
 ///////////////////////////////////////////////
 
+@mixin sectionPortfolioVer041515a {
+	section.portfolio {
+		background: $portfolioColourBack;
+		@include sectionPadding041515(5%,1%);
+		@include flexboxSettings041615a;
+			
+		////////////////////////////////////////////
+		///// 		HEADER MAJOR SECTION STYLING
+		///////////////////////////////////////////////
 
+		// args: $borderStyle,$fontfamily,$fontsize,$backColor
+		// @include headerMajor041615a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
+		@include headerMajor041815a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
+
+		////////////////////////////////////////////
+		
+		////////////////////////////////////////////
+		///// 		PORTFOLIO UNITS
+		////////////////////////////////////////////
+		
+		& section.portfolio_unit {
+			@include column(4);
+			// if you use only flex: 1 then all 6 divs 
+			// flex: 1;
+			margin-bottom: 2%;
+			background: $portfolioUnitColourBack;
+
+			// 736
+			@include iphone6Plus736R {
+				flex-flow: column;
+				@include column(6);
+				margin-bottom: 5%;
+			}
+
+			// 720
+			@include phabletR {
+				flex-flow: column;
+			}
+
+			// 480
+			@include phoneR {
+				@include column(12);
+				margin-bottom: 5%;
+			}
+
+			& img {
+				width: 100%;
+				height: 13em;
+			}
+
+			& .text {
+				padding: 10% 8% 10% 8%;
+				text-align: center;
+				& h3 {
+					font-size: $portfolioUnitFontSizeHeader;
+					margin-bottom: 10%;
+					margin-top: 3%;
+					font-family: $portfolioUnitFontFamilyHeader;
+				}
+				& p {
+					font-size: $portfolioUnitFontSizeText;
+					text-align: left;
+					font-family: $portfolioUnitFontFamilyText;
+				}
+				& a {
+					display: inline-block;
+					font-size: $portfolioUnitFontSizeLink;
+					background: $portfolioColourBackLink;
+					color: $portfolioColourLink;
+					padding: 4% 10% 4% 10%;
+					margin-top: 5%;
+					border-radius: 5px;
+					font-family: $portfolioUnitFontFamilyLink;
+					@include transitionEffectAllEaseIn(0.3s);
+					&:hover {
+						background: $portfolioColourLinkHover;
+					}
+				}
+			}
+		}
+
+		////////////////////////////////////////////
+	}
+}
+
+@mixin sectionPortfolioVer041815a {
+	section.portfolio {
+		background: $portfolioColourBack;
+		@include sectionPadding041515(5%,1%);
+		@include flexboxSettings041615a;
+			
+		////////////////////////////////////////////
+		///// 		HEADER MAJOR SECTION STYLING
+		///////////////////////////////////////////////
+
+		// args: $borderStyle,$fontfamily,$fontsize,$backColor
+		// @include headerMajor041615a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
+		@include headerMajor041815a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
+
+		////////////////////////////////////////////
+		
+		////////////////////////////////////////////
+		///// 		PORTFOLIO UNITS
+		////////////////////////////////////////////
+		
+		& section.portfolio_unit {
+			@include column(4);
+			// if you use only flex: 1 then all 6 divs 
+			// flex: 1;
+			margin-bottom: 2%;
+			background: $portfolioUnitColourBack;
+
+			// 736
+			@include iphone6Plus736R {
+				flex-flow: column;
+				@include column(6);
+				margin-bottom: 5%;
+			}
+
+			// 720
+			@include phabletR {
+				flex-flow: column;
+			}
+
+			// 480
+			@include phoneR {
+				@include column(12);
+				margin-bottom: 5%;
+			}
+
+			& .imgShaderBox1 {
+				margin: 0;
+				padding: 0;
+				position: relative;
+
+				& img {
+					// display: block;
+					width: 100%;
+					height: 13em;
+				}
+
+				@include imgShaderSetup041815a(13em,$portfolioColourBackImgShader,$portfolioFontSizeImgShader,$portfolioColourImgShader);
+			}			
+
+			& .text {
+				padding: 10% 8% 10% 8%;
+				text-align: center;
+				& h3 {
+					font-size: $portfolioUnitFontSizeHeader;
+					margin-bottom: 10%;
+					margin-top: 3%;
+					font-family: $portfolioUnitFontFamilyHeader;
+				}
+				& p {
+					font-size: $portfolioUnitFontSizeText;
+					text-align: left;
+					font-family: $portfolioUnitFontFamilyText;
+				}
+				& a {
+					display: inline-block;
+					font-size: $portfolioUnitFontSizeLink;
+					background: $portfolioColourBackLink;
+					color: $portfolioColourLink;
+					padding: 4% 10% 4% 10%;
+					margin-top: 5%;
+					border-radius: 5px;
+					font-family: $portfolioUnitFontFamilyLink;
+					@include transitionEffectAllEaseIn(0.3s);
+					&:hover {
+						background: $portfolioColourLinkHover;
+					}
+				}
+			}
+		}
+
+		////////////////////////////////////////////
+	}
+}
 
 ///////////////////////////////////////////////
 
@@ -14,88 +191,8 @@
 ///// 		MAIN CODE
 ///////////////////////////////////////////////
 
-section.portfolio {
-	background: $portfolioColourBack;
-	@include sectionPadding041515(5%,1%);
-	@include flexboxSettings041615a;
-		
-	////////////////////////////////////////////
-	///// 		HEADER MAJOR SECTION STYLING
-	///////////////////////////////////////////////
-
-	// args: $borderStyle,$fontfamily,$fontsize,$backColor
-	// @include headerMajor041615a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
-	@include headerMajor041815a($portfolioBorderMajor,$portfolioHeaderFontFamily,$portfolioHeaderFontSize,$portfolioHeaderColourBack);
-
-	////////////////////////////////////////////
-	
-	////////////////////////////////////////////
-	///// 		PORTFOLIO UNITS
-	////////////////////////////////////////////
-	
-	& section.portfolio_unit {
-		@include column(4);
-		// if you use only flex: 1 then all 6 divs 
-		// flex: 1;
-		margin-bottom: 2%;
-		background: $portfolioUnitColourBack;
-
-		// 736
-		@include iphone6Plus736R {
-			flex-flow: column;
-			@include column(6);
-			margin-bottom: 5%;
-		}
-
-		// 720
-		@include phabletR {
-			flex-flow: column;
-		}
-
-		// 480
-		@include phoneR {
-			@include column(12);
-			margin-bottom: 5%;
-		}
-
-		& img {
-			width: 100%;
-			height: 13em;
-		}
-
-		& .text {
-			padding: 10% 8% 10% 8%;
-			text-align: center;
-			& h3 {
-				font-size: $portfolioUnitFontSizeHeader;
-				margin-bottom: 10%;
-				margin-top: 3%;
-				font-family: $portfolioUnitFontFamilyHeader;
-			}
-			& p {
-				font-size: $portfolioUnitFontSizeText;
-				text-align: left;
-				font-family: $portfolioUnitFontFamilyText;
-			}
-			& a {
-				display: inline-block;
-				font-size: $portfolioUnitFontSizeLink;
-				background: $portfolioColourBackLink;
-				color: $portfolioColourLink;
-				padding: 4% 10% 4% 10%;
-				margin-top: 5%;
-				border-radius: 5px;
-				font-family: $portfolioUnitFontFamilyLink;
-				@include transitionEffectAllEaseIn(0.3s);
-				&:hover {
-					background: $portfolioColourLinkHover;
-				}
-			}
-		}
-	}
-
-	////////////////////////////////////////////
-}
+// @include sectionPortfolioVer041515a;
+@include sectionPortfolioVer041815a;
 
 ///////////////////////////////////////////////
 

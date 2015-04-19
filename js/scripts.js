@@ -24,11 +24,29 @@ function dropDownMenuClick041715a () {
 	});
 }
 
+function portfolioHoverSearchMode041815a () {
+	$('.portfolio_unit').hover(function() {
+		$(this).find('.imgShaderScreen1').css('display', 'flex');
+	}, function() {
+		$(this).find('.imgShaderScreen1').css('display', 'none');
+	});
+}
+
+function blogHoverSearchMode041815a () {
+	$('.blog_entry').hover(function() {
+		$(this).find('.imgShaderScreen1').css('display', 'flex');
+	}, function() {
+		$(this).find('.imgShaderScreen1').css('display', 'none');
+	});
+}
+
 //////////////////////////////////////////////////
 // EXECUTION CODE
 
 heroBlockSlider041515a();
 dropDownMenuClick041715a();
+portfolioHoverSearchMode041815a();
+blogHoverSearchMode041815a();
 
 //////////////////////////////////////////////////
 

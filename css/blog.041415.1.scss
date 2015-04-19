@@ -2,6 +2,10 @@
 ///// 		BLOG
 ///////////////////////////////////////////////
 
+// MIXINS  ------------------------------------------------
+
+// // END MIXINS ------------------------------------------------
+
 ////////////////////////////////////////////
 ///// 		MAIN CODE
 ///////////////////////////////////////////////
@@ -9,6 +13,7 @@
 section.blog {
 	background: $blogColourBack;
 	@include sectionPadding041515(2%,5%);
+	@include flexboxSettings041615a;
 
 	////////////////////////////////////////////
 	///// 		HEADER MAJOR SECTION STYLING
@@ -23,7 +28,7 @@ section.blog {
 	///// 		BLOG UNIT
 	///////////////////////////////////////////////
 	
-	@include flexboxSettings041615a();
+	
 
 	section.blog_entry {
 		@include column(6);
@@ -36,10 +41,20 @@ section.blog {
 			margin-bottom: 5%;
 		}
 
-		& img {
-			width: 100%;
-			height: 16em;
+		.imgShaderBox1 {
+			// for the image shader to work the blog entry unit must be set to position relative
+			position: relative;
+			margin: 0;
+			padding: 0;
+
+			& img {
+				width: 100%;
+				height: 16em;
+			}
+
+			@include imgShaderSetup041815a(16em,$blogColourBackImgShader,$blogFontSizeImgShader,$blogColourImgShader);
 		}
+
 		& .text {
 			padding: 8% 5% 8% 5%;
 			text-align: center;

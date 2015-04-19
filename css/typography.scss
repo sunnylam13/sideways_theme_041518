@@ -132,12 +132,19 @@ $portfolioHeaderColourBack: $firenzePeachYellow;
 
 // portfolio units
 $portfolioUnitColourBack: white;
+
 $portfolioUnitFontSizeHeader: $basefontsize*1.3;
-$portfolioUnitFontSizeText: $basefontsize;
-$portfolioUnitFontSizeLink: $basefontsize;
 $portfolioUnitFontFamilyHeader: $francoisone;
+
+$portfolioUnitFontSizeText: $basefontsize;
 $portfolioUnitFontFamilyText: $josefinsans;
+
+$portfolioUnitFontSizeLink: $basefontsize;
 $portfolioUnitFontFamilyLink: $francoisone;
+
+$portfolioColourImgShader: white; // for the span
+$portfolioColourBackImgShader: rgba(195, 54, 10,0.8); // for the screen
+$portfolioFontSizeImgShader: $basefontsize*2; // for the span
 
 // portfolio units links
 $portfolioColourLink: white;
@@ -156,6 +163,11 @@ $blogColourBackHeaderM: $firenzePeachYellow;
 $blogBorderHeaderM: 1px solid $firenzeDarkRed;
 $blogFontFamilyHeaderM: $anton;
 $blogFontSizeHeaderM: $basefontsize*1.5;
+
+// img shader
+$blogColourImgShader: white; // for the span
+$blogColourBackImgShader: rgba(36, 143, 103,0.8); // for the screen
+$blogFontSizeImgShader: $basefontsize*2; // for the span
 
 // blog unit
 $blogUnitColourBack: white;
